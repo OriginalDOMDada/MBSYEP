@@ -1,0 +1,21 @@
+$backup-stack: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+// breakpoints
+$xs: 480px !default;
+$sm: 768px !default;
+$md: 992px !default;
+$lg: 1200px !default;
+$xl: 1500px !default;
+
+// colors
+
+$green: #00ab65;
+$darkgreen: #007847;
+$yellow: #fcd804;
+$darkyellow: #d3af37;
+$grey: #ebebeb;
+$darkgrey: #333333;
+$blue: #0e5682;
+
+//fonts
+$nunito: 'Nunito', $backup-stack;
+$open_sans: 'Open Sans', $backup-stack;

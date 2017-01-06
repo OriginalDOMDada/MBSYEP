@@ -1,0 +1,43 @@
+body {
+  h2 {
+    text-align: center;
+    color: $green;
+  }
+
+  .top-section {
+    background-color: $green;
+    height: 90vh;
+    width: 100%;
+    display: table;
+    h1 {
+      font-family: $nunito;
+      font-weight: 900;
+      text-align: center;
+      display: table-cell;
+      vertical-align: middle;
+      color: white;
+      line-height: 1.1em;
+      span {
+        display: block;
+        &.yellow-title {
+          font-family: $open_sans;
+          font-size: 24px;
+          color: $yellow;
+          font-style: italic;
+        }
+      }
+    }
+  }
+  .horizontal-section {
+    background-color: $yellow;
+    height: 200px;
+    width: 100%;
+  }
+  .key-message-section {
+    padding: 25px;
+    background: white;
+    p {
+      text-align: center;
+    }
+  }
+}

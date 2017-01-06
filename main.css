@@ -1,0 +1,51 @@
+body p {
+  font-size: 18px;
+  font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
+body h2 {
+  font-family: "Nunito", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
+body h1 {
+  font-size: 48px; }
+
+body p {
+  font-size: 18px;
+  font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
+body h2 {
+  font-family: "Nunito", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
+body h1 {
+  font-size: 48px; }
+
+nav#header {
+  background-color: white; }
+
+body h2 {
+  text-align: center;
+  color: #00ab65; }
+body .top-section {
+  background-color: #00ab65;
+  height: 90vh;
+  width: 100%;
+  display: table; }
+  body .top-section h1 {
+    font-family: "Nunito", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 900;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    color: white;
+    line-height: 1.1em; }
+    body .top-section h1 span {
+      display: block; }
+      body .top-section h1 span.yellow-title {
+        font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        font-size: 24px;
+        color: #fcd804;
+        font-style: italic; }
+body .horizontal-section {
+  background-color: #fcd804;
+  height: 200px;
+  width: 100%; }
+body .key-message-section {
+  padding: 25px;
+  background: white; }
+  body .key-message-section p {
+    text-align: center; }
