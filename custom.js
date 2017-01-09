@@ -11,17 +11,17 @@ $(document).ready(function(){
       // $(value).css('visibility','visible');
   });
 
-// (function fadeOutSvg() {
-//   var number = $('#icon_' + random(icon_number));
-//   if($(number).css('display') !== 'none'){
-//     $(number).fadeOut(Math.floor(Math.random() * 1000),fadeOutSvg);
-//     $(number).delay(1000).fadeIn(Math.floor(Math.random() * 1000),fadeOutSvg);
-//   }
-//   else {
-//     $(number).delay(1000).fadeIn(Math.floor(Math.random() * 1000),fadeOutSvg);
-//   }
-//
-// })();
+(function fadeOutSvg() {
+  var number = $('#icon_' + random(icon_number));
+  if($(number).css('display') !== 'none'){
+    $(number).fadeOut(Math.floor(Math.random() * 5000),fadeOutSvg);
+    $(number).delay(1000).fadeIn(Math.floor(Math.random() * 250),fadeOutSvg);
+  }
+  else {
+    $(number).fadeIn(Math.floor(Math.random() * 250),fadeOutSvg);
+  }
+
+})();
 var x = 0;
 var current = 0;
 var up = 0;

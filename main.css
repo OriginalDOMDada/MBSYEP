@@ -17,6 +17,11 @@ body h1 {
 nav#header {
   background-color: white; }
 
+footer #footer {
+  background-color: #fcd804;
+  height: 500px;
+  width: 100%; }
+
 body svg g {
   visibility: visible;
   opacity: 1;
