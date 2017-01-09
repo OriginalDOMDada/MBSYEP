@@ -1,4 +1,17 @@
 body {
+  svg {
+    // display: none;
+    g {
+      visibility: visible;
+      opacity: 1;
+      display: block;
+    }
+    // g.active {
+    //   visibility: hidden;
+    //   opacity: 0;
+    //   transition: visibility 0s .5s, opacity .5s linear;
+    // }
+  }
   h2 {
     text-align: center;
     color: $green;
@@ -7,8 +20,9 @@ body {
   .top-section {
     background-color: $green;
     height: 90vh;
-    width: 100%;
+    width: 100vw;
     display: table;
+    position: relative;
     h1 {
       font-family: $nunito;
       font-weight: 900;
@@ -17,6 +31,8 @@ body {
       vertical-align: middle;
       color: white;
       line-height: 1.1em;
+      z-index: 100;
+      position: relative;
       span {
         display: block;
         &.yellow-title {
@@ -27,17 +43,78 @@ body {
         }
       }
     }
+
+    .svg-background {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      left: 0;
+      svg {
+        min-height: 1000px;
+        height: 100%;
+        width: auto;
+      }
+    }
   }
   .horizontal-section {
     background-color: $yellow;
     height: 200px;
     width: 100%;
+    background-image: url('block-pattern.svg');
+    background-repeat: repeat;
+    background-size: 500px;
+    padding: 25px;
   }
   .key-message-section {
     padding: 25px;
     background: white;
     p {
       text-align: center;
+    }
+
+    .youtube {
+      height: 400px;
+      width: 100%;
+      display: inline-block;
+      background:linear-gradient(rgba(0, 85, 129, 0.5),rgba(0, 85, 129, 0.5)),url('img/sample_1.jpg');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.stats-section {
+  padding: 25px;
+}
+
+.stories-section {
+  padding: 25px;
+  .col-md-6 {
+    .story-2, .story-1 {
+      background:linear-gradient(rgba(0, 85, 129, 0.5),rgba(0, 85, 129, 0.5)),url('img/sample_1.jpg');
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 300px;
+      position: relative;
+      .content {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        bottom: 25px;
+        h3 {
+          color: white;
+          padding-bottom: 25px;
+        }
+        a {
+          color: white;
+          padding: 10px 15px;
+          border: 2px solid white;
+          text-decoration: none;
+        }
+      }
     }
   }
 }
