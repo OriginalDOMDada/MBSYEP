@@ -6,6 +6,11 @@
 }
 @media screen and (max-width: $md) {
 
+nav#header .navbar-collapse ul.nav {
+  position: relative;
+  bottom: inital;
+  right: inital;
+}
 }
 @media screen and (max-width: $lg) {
 

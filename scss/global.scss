@@ -12,3 +12,34 @@ body {
     font-size: 48px;
   }
 }
+
+#imageGallery{
+  a {
+    img {
+      -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+      filter: grayscale(100%);
+    }
+    div.overlay {
+      height: 100%;
+      width: 100%;
+      background-color: $yellow;
+      opacity: .5;
+    }
+    &:nth-child(2n) {
+      div.overlay {
+        background-color: $green;
+      }
+    }
+    &:nth-child(4n) {
+      div.overlay {
+        background-color: white;
+      }
+    }
+  }
+}
+
+.vcenter {
+    // display: inline-block;
+    vertical-align: middle;
+    // float: none;
+}

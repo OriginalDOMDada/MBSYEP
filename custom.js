@@ -96,6 +96,7 @@ var direction = 'h';
   }
 
   function createPie(id) {
+    console.log(id);
     var
       listData      = [],
       listTotal     = 0,
@@ -104,16 +105,48 @@ var direction = 'h';
       pieElement    = id + " .pie-chart__pie"
       dataElement   = id + " .pie-chart__legend"
 
-      color         = [
-        "#00ab65",
-        "#0e5682",
-        "#fcd804",
-        "#ecedee",
-        "#007847",
-        "#d3af37",
-        "#111111",
-        "#3e779b"
-      ];
+
+      if(id === '.pieID--micro-skills'){
+        color    = [
+          "#00ab65",
+          "#008850",
+          "#32bb83",
+          "#00663c",
+          "#66cca2"
+        ];
+      }
+      else if (id === '.pieID--categories') {
+        color    = [
+          "#fcd804",
+          "#e2c203",
+          "#fcdb1d",
+          "#c9ac03",
+          "#fcdf36",
+          "#b09702",
+          "#fce34f",
+          '#978102'
+        ];
+
+      }
+      else if (id === '.pieID--operations') {
+        color    = [
+          "#041927",
+          "#052234",
+          "#072b41",
+          "#08334e",
+          "#093c5b",
+          "#0b4468",
+          "#0c4d75",
+          "#0e5682",
+          "#26668e",
+          "#3e779b",
+          "#5688a7",
+          "#6e99b4",
+          "#86aac0",
+          "#9ebbcd",
+          "#b6ccd9"
+        ];
+      }
 
     color = shuffle( color );
 
@@ -152,6 +185,24 @@ var direction = 'h';
   }
 
   createPieCharts();
+
+
+  $("#imageGallery").justifiedGallery({
+    lastRow : 'justify',
+    rowHeight: 150,
+    maxRowHeight : 150,
+    rel : 'gallery1', //replace with 'gallery1' the rel attribute of each link
+    margins : 2,
+    randomize: true
+    }).on('jg.complete', function () {
+        $(this).find('a').colorbox({
+            maxWidth : '80%',
+            maxHeight : '80%',
+            opacity : 0.8,
+            transition : 'elastic',
+            current : ''
+        });
+    });
 
 
 });

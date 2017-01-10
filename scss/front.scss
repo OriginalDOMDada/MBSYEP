@@ -59,7 +59,7 @@ body {
   }
   .horizontal-section {
     background-color: $yellow;
-    height: 200px;
+    height: 400px;
     width: 100%;
     background-image: url('block-pattern.svg');
     background-repeat: repeat;
@@ -117,4 +117,10 @@ body {
       }
     }
   }
+}
+
+.gallery-section {
+  padding: 50px;
+  background-color: $grey;
+
 }

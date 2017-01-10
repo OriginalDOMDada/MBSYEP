@@ -1,9 +1,36 @@
 nav#header {
+  border: none;
   background-color: white;
+  .navbar-brand {
+    height: 100px;
+    img {
+      height: 100%;
+    }
+  }
+  .navbar-collapse {
+    position: relative;
+    ul.nav {
+      // change on responsive
+      position: absolute;
+      bottom: 20px;
+      right: 0;
+      a {
+        font-family: $open_sans;
+        font-weight: bold;
+        font-size: 24px;
+        color: $blue;
+        border-bottom: 5px solid white;
+        &:hover {
+          border-bottom: 5px solid $green;
+        }
+      }
+    }
+  }
 }
 
 footer #footer {
   background-color: $yellow;
   height: 500px;
   width: 100%;
+
 }
