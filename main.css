@@ -6,20 +6,6 @@ body h2, body h3 {
 body h1 {
   font-size: 48px; }
 
-#imageGallery a img {
-  -webkit-filter: grayscale(100%);
-  /* Safari 6.0 - 9.0 */
-  filter: grayscale(100%); }
-#imageGallery a div.overlay {
-  height: 100%;
-  width: 100%;
-  background-color: #fcd804;
-  opacity: .5; }
-#imageGallery a:nth-child(2n) div.overlay {
-  background-color: #00ab65; }
-#imageGallery a:nth-child(4n) div.overlay {
-  background-color: white; }
-
 .vcenter {
   vertical-align: middle; }
 
@@ -30,20 +16,6 @@ body h2, body h3 {
   font-family: "Nunito", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
 body h1 {
   font-size: 48px; }
-
-#imageGallery a img {
-  -webkit-filter: grayscale(100%);
-  /* Safari 6.0 - 9.0 */
-  filter: grayscale(100%); }
-#imageGallery a div.overlay {
-  height: 100%;
-  width: 100%;
-  background-color: #fcd804;
-  opacity: .5; }
-#imageGallery a:nth-child(2n) div.overlay {
-  background-color: #00ab65; }
-#imageGallery a:nth-child(4n) div.overlay {
-  background-color: white; }
 
 .vcenter {
   vertical-align: middle; }
@@ -110,6 +82,9 @@ body .top-section {
         font-size: 24px;
         color: #fcd804;
         font-style: italic; }
+    body .top-section h1 img {
+      width: 200px;
+      height: auto; }
   body .top-section .svg-background {
     position: absolute;
     height: 100%;
@@ -122,12 +97,15 @@ body .top-section {
       width: auto; }
 body .horizontal-section {
   background-color: #fcd804;
-  height: 400px;
+  height: 200px;
   width: 100%;
   background-image: url("block-pattern.svg");
   background-repeat: repeat;
   background-size: 500px;
   padding: 25px; }
+  body .horizontal-section h2 {
+    color: #333333;
+    padding-top: 25px; }
 body .key-message-section {
   padding: 25px;
   background: white; }
@@ -152,7 +130,7 @@ body .key-message-section {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 300px;
+    height: 350px;
     position: relative; }
     .stories-section .col-md-6 .story-2 .content, .stories-section .col-md-6 .story-1 .content {
       position: absolute;

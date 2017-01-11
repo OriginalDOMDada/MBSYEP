@@ -42,6 +42,10 @@ body {
           font-style: italic;
         }
       }
+      img {
+        width: 200px;
+        height: auto;
+      }
     }
 
     .svg-background {
@@ -59,12 +63,16 @@ body {
   }
   .horizontal-section {
     background-color: $yellow;
-    height: 400px;
+    height: 200px;
     width: 100%;
     background-image: url('block-pattern.svg');
     background-repeat: repeat;
     background-size: 500px;
     padding: 25px;
+    h2 {
+      color: $darkgrey;
+      padding-top: 25px;
+    }
   }
   .key-message-section {
     padding: 25px;
@@ -97,7 +105,7 @@ body {
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
-      height: 300px;
+      height: 350px;
       position: relative;
       .content {
         position: absolute;
@@ -113,6 +121,9 @@ body {
           padding: 10px 15px;
           border: 2px solid white;
           text-decoration: none;
+          // overflow: hidden;
+
+
         }
       }
     }

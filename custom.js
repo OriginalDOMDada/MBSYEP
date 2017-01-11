@@ -1,4 +1,17 @@
 $(document).ready(function(){
+
+  $(function() {
+    $(".slice").mouseenter(function () {
+             $this = $(this);
+            // $this.find("span").css("display", "block");
+            console.log($this);
+      }).mouseleave(function ()
+      {
+          $this = $(this);
+          // $this.find("span").hide();
+
+      });
+  });
   function random(icon_number) {
     return Math.floor(Math.random() * icon_number);
   }
@@ -64,13 +77,31 @@ var direction = 'h';
 
 
   function sliceSize(dataNum, dataTotal) {
+    // console.log(dataNum);
+
     return (dataNum / dataTotal) * 360;
   }
 
   function addSlice(id, sliceSize, pieElement, offset, sliceID, color) {
-    $(pieElement).append("<div class='slice "+ sliceID + "'><span></span></div>");
+    // console.log(size);
+    // console.log(pieElement);
+    // console.log(sliceSize);
+    // console.log(piebackground);
+    // $(id+ " .pie-chart__legend li").each(function() {
+    //   // console.log($(this).attr('style'));
+    //   var raw = String($(this).attr('style')).replace('border-color: ','').replace(';','');
+    //   var piebackground = $("."+sliceID + " span").css('background-color');
+    //   if(raw === piebackground){
+    //     console.log(raw);
+    //     console.log(piebackground);
+    //   }
+    //
+    // });
+
+    $(pieElement).append("<div data-total='" + '1' + "' class='slice "+ sliceID + "'><span></span></div>");
     var offset = offset - 1;
     var sizeRotation = -179 + sliceSize;
+    // console.log(sizeRotation);
 
     $(id + " ." + sliceID).css({
       "transform": "rotate(" + offset + "deg) translate3d(0,0,0)"
@@ -96,14 +127,15 @@ var direction = 'h';
   }
 
   function createPie(id) {
-    console.log(id);
     var
       listData      = [],
       listTotal     = 0,
       offset        = 0,
       i             = 0,
-      pieElement    = id + " .pie-chart__pie"
+      pieElement    = id + " .pie-chart__pie",
       dataElement   = id + " .pie-chart__legend"
+
+      // console.log($(dataElement));
 
 
       if(id === '.pieID--micro-skills'){
@@ -152,6 +184,9 @@ var direction = 'h';
 
     $(dataElement+" span").each(function() {
       listData.push(Number($(this).html()));
+      // $(pieElement).
+      // console.log(pieElement);
+      // console.log($(pieElement).children().hide());
     });
 
     for(i = 0; i < listData.length; i++) {
@@ -186,14 +221,16 @@ var direction = 'h';
 
   createPieCharts();
 
+  $()
+
 
   $("#imageGallery").justifiedGallery({
     lastRow : 'justify',
-    rowHeight: 150,
-    maxRowHeight : 150,
+    rowHeight: 200,
+    maxRowHeight : 200,
     rel : 'gallery1', //replace with 'gallery1' the rel attribute of each link
-    margins : 2,
-    randomize: true
+    margins : 10,
+    randomize: false
     }).on('jg.complete', function () {
         $(this).find('a').colorbox({
             maxWidth : '80%',
