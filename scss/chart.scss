@@ -42,6 +42,16 @@ body * {
   height: 200px;
   width: 200px;
   margin: 10px auto 35px;
+  .current-number {
+    color: black;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    text-align: center;
+    height: 30px;
+    width: auto;
+    z-index: 2;
+  }
 }
 .pie-chart__pie::before {
   content: "";
@@ -55,16 +65,7 @@ body * {
   top: 50px;
   left: 50px;
 }
-.pie-chart__pie::after {
-  content: "";
-  display: block;
-  width: 120px;
-  height: 2px;
-  background: rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
-  box-shadow: 0 0 3px 4px rgba(0, 0, 0, 0.1);
-  margin: 220px auto;
-}
+
 
 .slice {
   position: absolute;
@@ -97,18 +98,45 @@ body * {
   box-shadow: 1px 1px 0 #DDD, 2px 2px 0 #BBB;
   text-align: left;
   width: 75%;
+  height: 50px;
+  &::before {
+    content: "See More";
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    color: $blue;
+    font-family: $nunito;
+  }
 }
 .pie-chart__legend li {
   height: 30px;
   margin-bottom: 0.7em;
   padding-left: 0.5em;
   border-left: 2.25em solid black;
+  display: none;
 }
 .pie-chart__legend em {
   font-style: normal;
 }
 .pie-chart__legend span {
   float: right;
+}
+
+.pie-chart__legend {
+  &.active-data {
+    height: 100%;
+    li {
+      display: block;
+    }
+    &::before {
+      content: "Hide";
+      display: block;
+      text-align: center;
+      font-size: 10px;
+      color: $blue;
+      font-family: $nunito;
+    }
+  }
 }
 
 .pie-charts {

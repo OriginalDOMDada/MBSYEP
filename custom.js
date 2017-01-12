@@ -1,22 +1,22 @@
 $(document).ready(function(){
 
-  $(function() {
-    $(".slice").mouseenter(function () {
-             $this = $(this);
-            // $this.find("span").css("display", "block");
-            console.log($this);
-      }).mouseleave(function ()
-      {
-          $this = $(this);
-          // $this.find("span").hide();
-
-      });
-  });
+  // $(function() {
+  //   $(".slice").mouseenter(function () {
+  //            $this = $(this);
+  //           // $this.find("span").css("display", "block");
+  //           console.log($this);
+  //     }).mouseleave(function ()
+  //     {
+  //         $this = $(this);
+  //         // $this.find("span").hide();
+  //
+  //     });
+  // });
   function random(icon_number) {
     return Math.floor(Math.random() * icon_number);
   }
-  var icon_number = $('svg g').length;
-  var icons = $('svg g');
+  var icon_number = $('.top-section svg g').length;
+  var icons = $('.top-section svg g');
   // var transition_time = 500;
   // var waiting_time = 500;
   $(icons).each( function(index,value) {
@@ -125,7 +125,7 @@ var direction = 'h';
       iterateSlices(id, sliceSize-maxSize, pieElement, offset+maxSize, dataCount, sliceCount+1, color);
     }
   }
-
+// start of data charts
   function createPie(id) {
     var
       listData      = [],
@@ -180,13 +180,10 @@ var direction = 'h';
         ];
       }
 
-    color = shuffle( color );
+    // color = shuffle( color );
 
     $(dataElement+" span").each(function() {
       listData.push(Number($(this).html()));
-      // $(pieElement).
-      // console.log(pieElement);
-      // console.log($(pieElement).children().hide());
     });
 
     for(i = 0; i < listData.length; i++) {
@@ -220,9 +217,52 @@ var direction = 'h';
   }
 
   createPieCharts();
+// end of data
+var slices = [];
+var stats = [];
+$('.pie-charts .pie-chart--wrapper .pie-chart').each(function(){
+  $('.pie-chart__pie .slice').each(function() {
+    var $this = $(this).children('span');
+     slices.push($($this).css('background-color'));
+  });
+  $('.pie-chart__legend li').each(function() {
+    $(this).addClass('numbers');
+     stats.push($(this).css('border-color'));
+  });
+});
 
-  $()
+$(function() {
+  $(".slice").mouseenter(function () {
+          var currentChart = $(this).parent();
+           var currentColor = $(this).children('span').css('background-color');
 
+          var matchMaker = $('li.numbers').filter(function() {
+              var element = $(this);
+              if(element.css('border-color') == currentColor) {
+                var currentNumber = $(element).children('span')['0'].innerHTML;
+                var currentJob = $(element).children('em')['0'].innerHTML;
+                $("<div class='current-number'>" + currentNumber + "<br><span>" +currentJob + "</span></div>").appendTo(currentChart);
+              }
+              return true;
+          });
+
+    }).mouseleave(function ()
+    {
+        $this = $(this);
+        // $this.find("span").hide();
+        $('.current-number').remove();
+
+    });
+});
+
+$('.pie-chart__legend').on('click',function(){
+  if ($(this).hasClass('active-data')) {
+    $(this).removeClass('active-data');
+  }
+  else {
+    $(this).addClass('active-data');
+  }
+});
 
   $("#imageGallery").justifiedGallery({
     lastRow : 'justify',

@@ -4,7 +4,10 @@ body p {
 body h2, body h3 {
   font-family: "Nunito", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
 body h1 {
-  font-size: 48px; }
+  font-size: 50px; }
+
+#cboxOverlay {
+  background-color: white; }
 
 .vcenter {
   vertical-align: middle; }
@@ -15,16 +18,21 @@ body p {
 body h2, body h3 {
   font-family: "Nunito", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
 body h1 {
-  font-size: 48px; }
+  font-size: 50px; }
+
+#cboxOverlay {
+  background-color: white; }
 
 .vcenter {
   vertical-align: middle; }
 
 nav#header {
   border: none;
-  background-color: white; }
+  background-color: white;
+  z-index: 200; }
   nav#header .navbar-brand {
-    height: 100px; }
+    height: 110px;
+    padding: 15px 15px; }
     nav#header .navbar-brand img {
       height: 100%; }
   nav#header .navbar-collapse {
@@ -41,6 +49,28 @@ nav#header {
         border-bottom: 5px solid white; }
         nav#header .navbar-collapse ul.nav a:hover {
           border-bottom: 5px solid #00ab65; }
+  nav#header .nav-message {
+    position: relative;
+    padding: 15px 0;
+    background-color: #ebebeb;
+    width: 100%;
+    -webkit-box-shadow: 2px 7px 11px -2px rgba(204, 204, 204, 0.5);
+    -moz-box-shadow: 2px 7px 11px -2px rgba(204, 204, 204, 0.5);
+    box-shadow: 2px 7px 11px -2px rgba(204, 204, 204, 0.5); }
+    nav#header .nav-message p {
+      font-size: 16px;
+      margin-bottom: 0;
+      text-align: left;
+      float: left;
+      font-weight: bold;
+      margin-top: 5px; }
+    nav#header .nav-message a {
+      background-color: #fcd804;
+      padding: 10px 20px;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+      float: right; }
 
 footer #footer {
   background-color: #fcd804;
@@ -70,16 +100,16 @@ body .top-section {
     font-weight: 900;
     text-align: center;
     display: table-cell;
-    vertical-align: middle;
     color: white;
     line-height: 1.1em;
     z-index: 100;
+    bottom: -225px;
     position: relative; }
     body .top-section h1 span {
       display: block; }
       body .top-section h1 span.yellow-title {
         font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-        font-size: 24px;
+        font-size: 30px;
         color: #fcd804;
         font-style: italic; }
     body .top-section h1 img {
@@ -112,13 +142,31 @@ body .key-message-section {
   body .key-message-section p {
     text-align: center; }
   body .key-message-section .youtube {
-    height: 400px;
+    height: 350px;
     width: 100%;
+    margin: 20px auto;
     display: inline-block;
     background: linear-gradient(rgba(0, 85, 129, 0.5), rgba(0, 85, 129, 0.5)), url("img/sample_1.jpg");
     background-position: center;
     background-size: cover;
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    border: 2px solid white;
+    opacity: 1;
+    transition: all .5s linear;
+    -webkit-transition: all .5s linear; }
+    body .key-message-section .youtube svg#play {
+      margin-top: 125px;
+      height: 80px;
+      width: 80px;
+      opacity: .7; }
+    body .key-message-section .youtube:hover {
+      background: linear-gradient(rgba(51, 51, 51, 0.5), rgba(51, 51, 51, 0.5)), url("img/sample_1.jpg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      opacity: .9; }
+      body .key-message-section .youtube:hover svg#play g {
+        opacity: 1; }
 
 .stats-section {
   padding: 25px; }
@@ -187,6 +235,18 @@ body * {
   height: 200px;
   width: 200px;
   margin: 10px auto 35px; }
+  .pie-chart__pie .current-number {
+    color: black;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    height: 30px;
+    width: auto;
+    z-index: 2; }
 
 .pie-chart__pie::before {
   content: "";
@@ -199,16 +259,6 @@ body * {
   border-radius: 50%;
   top: 50px;
   left: 50px; }
-
-.pie-chart__pie::after {
-  content: "";
-  display: block;
-  width: 120px;
-  height: 2px;
-  background: rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
-  box-shadow: 0 0 3px 4px rgba(0, 0, 0, 0.1);
-  margin: 220px auto; }
 
 .slice {
   position: absolute;
@@ -239,19 +289,40 @@ body * {
   font-size: 12px;
   box-shadow: 1px 1px 0 #DDD, 2px 2px 0 #BBB;
   text-align: left;
-  width: 75%; }
+  width: 75%;
+  height: 50px; }
+  .pie-chart__legend::before {
+    content: "See More";
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    color: #0e5682;
+    font-family: "Nunito", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
 
 .pie-chart__legend li {
   height: 30px;
   margin-bottom: 0.7em;
   padding-left: 0.5em;
-  border-left: 2.25em solid black; }
+  border-left: 2.25em solid black;
+  display: none; }
 
 .pie-chart__legend em {
   font-style: normal; }
 
 .pie-chart__legend span {
   float: right; }
+
+.pie-chart__legend.active-data {
+  height: 100%; }
+  .pie-chart__legend.active-data li {
+    display: block; }
+  .pie-chart__legend.active-data::before {
+    content: "Hide";
+    display: block;
+    text-align: center;
+    font-size: 10px;
+    color: #0e5682;
+    font-family: "Nunito", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
 
 .pie-charts {
   display: -webkit-box;
