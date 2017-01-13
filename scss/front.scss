@@ -74,6 +74,7 @@ body {
       background-color: white;
       padding: 10px;
       border: 2px solid #d1d1d1;
+      position: relative;
       h4 {
         color: $blue;
         font-size: 20px;
@@ -81,6 +82,24 @@ body {
       p {
         color: $darkgrey;
         font-size: 16px;
+      }
+      .button-wrapper {
+        width: 100%;
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: 20px;
+          button {
+            width: 25%;
+            display: inline-block;
+            background-color: $yellow;
+            margin: 0 5px;
+            border-radius: 0;
+            border-color: $grey;
+            .glyphicon {
+              color: white;
+            }
+          }
       }
     }
 
@@ -96,9 +115,18 @@ body {
     background-repeat: repeat;
     background-size: 500px;
     padding: 25px;
-    h2 {
+    h3 {
       color: $darkgrey;
       padding-top: 25px;
+      font-style: italic;
+      font-size: 35px;
+    }
+    span {
+      font-style: italic;
+      font-family: $open_sans;
+      font-size: 16px;
+      padding-top: 10px;
+      float: right;
     }
   }
   .key-message-section {
@@ -232,4 +260,8 @@ body {
       color: white;
     }
   }
+}
+
+.alternate {
+  background: linear-gradient(rgba(0, 171, 101, 0.75),rgba(0, 171, 101, 0.75)),url('img/IMG_5856_grey.jpg');
 }

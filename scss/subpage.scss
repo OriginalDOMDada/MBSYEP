@@ -1,0 +1,20 @@
+body.subpage {
+  .top-section {
+    h1 {
+      font-size: 80px;
+      bottom: -225px;
+    }
+    p {
+      line-height: 1.5em;
+      font-size: 16px;
+    }
+  }
+  .documents a{
+    display: block;
+    font-size: 18px;
+    color: $blue;
+    padding: 10px;
+    font-family: $nunito;
+
+  }
+}

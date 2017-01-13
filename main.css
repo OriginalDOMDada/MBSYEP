@@ -158,13 +158,29 @@ body .announcements-section {
     height: 250px;
     background-color: white;
     padding: 10px;
-    border: 2px solid #d1d1d1; }
+    border: 2px solid #d1d1d1;
+    position: relative; }
     body .announcements-section .date h4 {
       color: #0e5682;
       font-size: 20px; }
     body .announcements-section .date p {
       color: #333333;
       font-size: 16px; }
+    body .announcements-section .date .button-wrapper {
+      width: 100%;
+      position: absolute;
+      right: 0;
+      left: 0;
+      bottom: 20px; }
+      body .announcements-section .date .button-wrapper button {
+        width: 25%;
+        display: inline-block;
+        background-color: #fcd804;
+        margin: 0 5px;
+        border-radius: 0;
+        border-color: #ebebeb; }
+        body .announcements-section .date .button-wrapper button .glyphicon {
+          color: white; }
 body .horizontal-section {
   background-color: #fcd804;
   height: 200px;
@@ -173,9 +189,17 @@ body .horizontal-section {
   background-repeat: repeat;
   background-size: 500px;
   padding: 25px; }
-  body .horizontal-section h2 {
+  body .horizontal-section h3 {
     color: #333333;
-    padding-top: 25px; }
+    padding-top: 25px;
+    font-style: italic;
+    font-size: 35px; }
+  body .horizontal-section span {
+    font-style: italic;
+    font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-size: 16px;
+    padding-top: 10px;
+    float: right; }
 body .key-message-section {
   padding: 25px;
   background: white; }
@@ -274,6 +298,22 @@ body .key-message-section {
     border-color: white; }
   .email-section form .glyphicon {
     color: white; }
+
+.alternate {
+  background: linear-gradient(rgba(0, 171, 101, 0.75), rgba(0, 171, 101, 0.75)), url("img/IMG_5856_grey.jpg"); }
+
+body.subpage .top-section h1 {
+  font-size: 80px;
+  bottom: -225px; }
+body.subpage .top-section p {
+  line-height: 1.5em;
+  font-size: 16px; }
+body.subpage .documents a {
+  display: block;
+  font-size: 18px;
+  color: #0e5682;
+  padding: 10px;
+  font-family: "Nunito", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
 
 body {
   font-family: "Open Sans", Arial;
