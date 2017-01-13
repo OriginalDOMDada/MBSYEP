@@ -77,8 +77,6 @@ var direction = 'h';
 
 
   function sliceSize(dataNum, dataTotal) {
-    // console.log(dataNum);
-
     return (dataNum / dataTotal) * 360;
   }
 
@@ -180,7 +178,7 @@ var direction = 'h';
         ];
       }
 
-    // color = shuffle( color );
+    color = shuffle( color );
 
     $(dataElement+" span").each(function() {
       listData.push(Number($(this).html()));
@@ -217,58 +215,78 @@ var direction = 'h';
   }
 
   createPieCharts();
+
+  // createPieCharts();
 // end of data
-var slices = [];
-var stats = [];
-$('.pie-charts .pie-chart--wrapper .pie-chart').each(function(){
-  $('.pie-chart__pie .slice').each(function() {
-    var $this = $(this).children('span');
-     slices.push($($this).css('background-color'));
-  });
-  $('.pie-chart__legend li').each(function() {
-    $(this).addClass('numbers');
-     stats.push($(this).css('border-color'));
-  });
-});
+// var slices = [];
+// var stats = [];
+// $('.pie-charts .pie-chart--wrapper .pie-chart').each(function(){
+//   $('.pie-chart__pie .slice').each(function() {
+//     var $this = $(this).children('span');
+//      slices.push($($this).css('background-color'));
+//   });
+//   $('.pie-chart__legend li').each(function() {
+//     $(this).addClass('numbers');
+//      stats.push($(this).css('border-color'));
+//   });
+// });
 
-$(function() {
-  $(".slice").mouseenter(function () {
-          var currentChart = $(this).parent();
-           var currentColor = $(this).children('span').css('background-color');
+// $(function() {
+//   $(".slice").mouseenter(function () {
+//           var currentChart = $(this).parent();
+//            var currentColor = $(this).children('span').css('background-color');
+//
+//           var matchMaker = $('li.numbers').filter(function() {
+//               var element = $(this);
+//               if(element.css('border-color') == currentColor) {
+//                 var currentNumber = $(element).children('span')['0'].innerHTML;
+//                 var currentJob = $(element).children('em')['0'].innerHTML;
+//                 $("<div class='current-number'>" + currentNumber + "<br><span>" +currentJob + "</span></div>").appendTo(currentChart);
+//               }
+//               return true;
+//           });
+//
+//     }).mouseleave(function ()
+//     {
+//         $this = $(this);
+//         // $this.find("span").hide();
+//         $('.current-number').remove();
+//
+//     });
+// });
 
-          var matchMaker = $('li.numbers').filter(function() {
-              var element = $(this);
-              if(element.css('border-color') == currentColor) {
-                var currentNumber = $(element).children('span')['0'].innerHTML;
-                var currentJob = $(element).children('em')['0'].innerHTML;
-                $("<div class='current-number'>" + currentNumber + "<br><span>" +currentJob + "</span></div>").appendTo(currentChart);
-              }
-              return true;
-          });
+$('.pie-chart__legend li').on('click',function(){
+    var $this = $(this);
+    var chartContainer = $this.closest('.pie-chart--wrapper');
+    var currentChart = chartContainer.find('.pie-chart__pie');
 
-    }).mouseleave(function ()
-    {
-        $this = $(this);
-        // $this.find("span").hide();
-        $('.current-number').remove();
-
-    });
-});
-
-$('.pie-chart__legend').on('click',function(){
-  if ($(this).hasClass('active-data')) {
-    $(this).removeClass('active-data');
-  }
-  else {
-    $(this).addClass('active-data');
-  }
+    if (chartContainer.hasClass('pieID--micro-skills')) {
+      // currentChart.remove('.current-number');
+      createPie('.pieID--micro-skills');
+      var currentNumber = $this.find('span')['0'].innerHTML;
+      var currentJob = $this.find('em')['0'].innerHTML;
+      $("<div class='current-number'>" + currentNumber + "<br><span>" +currentJob + "</span></div>").appendTo(currentChart);
+    }
+    if (chartContainer.hasClass('pieID--categories')) {
+        createPie('.pieID--categories');
+        var currentNumber = $this.find('span')['0'].innerHTML;
+        var currentJob = $this.find('em')['0'].innerHTML;
+        $("<div class='current-number'>" + currentNumber + "<br><span>" +currentJob + "</span></div>").appendTo(currentChart);
+    }
+    if (chartContainer.hasClass('pieID--operations')) {
+        createPie('.pieID--operations');
+        var currentNumber = $this.find('span')['0'].innerHTML;
+        var currentJob = $this.find('em')['0'].innerHTML;
+        $("<div class='current-number'>" + currentNumber + "<br><span>" +currentJob + "</span></div>").appendTo(currentChart);
+    }
+  return false;
 });
 
   $("#imageGallery").justifiedGallery({
     lastRow : 'justify',
     rowHeight: 200,
     maxRowHeight : 200,
-    rel : 'gallery1', //replace with 'gallery1' the rel attribute of each link
+    rel : 'gallery', //replace with 'gallery1' the rel attribute of each link
     margins : 10,
     randomize: false
     }).on('jg.complete', function () {

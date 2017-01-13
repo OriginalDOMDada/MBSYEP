@@ -30,7 +30,7 @@ body * {
   margin: 30px auto;
   text-align: center;
   h2 {
-    color: $darkgrey;
+    color: $blue;
   }
 }
 .pie-chart__pie, .pie-chart__legend {
@@ -87,6 +87,30 @@ body * {
   clip: rect(0px, 200px, 200px, 100px);
 }
 
+.pie-legend {
+  display: table;
+  margin: 0 auto;
+  max-width: 250px;
+  width: 100%;
+  button {
+    width: 100%;
+    background-color: $grey;
+    color: $blue;
+    font-size: 19px;
+    font-family: $nunito;
+    border-radius: 0;
+    &:hover, &:active {
+      background-color: $blue;
+      border-color: $grey;
+    }
+    &:focus {
+      background-color: $grey;
+      color: $blue;
+      border-color: $blue;
+    }
+  }
+}
+
 .pie-chart__legend {
   display: block;
   list-style-type: none;
@@ -97,23 +121,13 @@ body * {
   font-size: 12px;
   box-shadow: 1px 1px 0 #DDD, 2px 2px 0 #BBB;
   text-align: left;
-  width: 75%;
-  height: 50px;
-  &::before {
-    content: "See More";
-    display: block;
-    text-align: center;
-    font-size: 16px;
-    color: $blue;
-    font-family: $nunito;
-  }
+  width: 100%;
 }
 .pie-chart__legend li {
-  height: 30px;
   margin-bottom: 0.7em;
   padding-left: 0.5em;
   border-left: 2.25em solid black;
-  display: none;
+  // display: none;
 }
 .pie-chart__legend em {
   font-style: normal;
@@ -127,14 +141,6 @@ body * {
     height: 100%;
     li {
       display: block;
-    }
-    &::before {
-      content: "Hide";
-      display: block;
-      text-align: center;
-      font-size: 10px;
-      color: $blue;
-      font-family: $nunito;
     }
   }
 }
