@@ -59,16 +59,19 @@ body.subpage {
       width: 50px;
       background-size: contain;
       display: inline-block;
-      -webkit-transform: rotate(45deg);
-      -moz-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-      -o-transform: rotate(45deg);
-      transform: rotate(45deg);
-
+      // -webkit-transform: rotate(45deg);
+      // -moz-transform: rotate(45deg);
+      // -ms-transform: rotate(45deg);
+      // -o-transform: rotate(45deg);
+      // transform: rotate(45deg);
     }
   }
   .answer {
     margin: 25px 10px;
     font-size: 18px;
   }
+}
+
+form.contact-form {
+  text-align: left;
 }

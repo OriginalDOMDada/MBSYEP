@@ -48,7 +48,7 @@
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="../navbar/">About Us</a></li>
+              <li><a href="index.html">About Us</a></li>
               <li><a href="youth.html">Youth</a></li>
               <li><a href="employers.html">Employers</a></li>
               <li><a href="contact.html">Contact Us</a></li>
@@ -76,14 +76,52 @@
       <div class="container-fluid key-message-section">
         <div class="row">
               <div class="col-md-10 col-md-offset-1">
-                <h2>Important Documents</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fermentum sem id quam dictum tincidunt. Proin diam elit, porttitor in sapien eu, porta accumsan libero. Cras in velit quis nisl aliquam dictum sit amet eget justo. Praesent nisi erat, maximus eu quam.</p>
-                <div class="documents">
-                  <a href="http://webappsdev.does.dc.gov/doestms2/Account/Login?ReturnUrl=%2fdoestms2%2f" target="_blank">MBSYEP Blank Timesheet</a>
-                  <a href="http://does.dc.gov/sites/default/files/dc/sites/does/page_content/attachments/MBSYEP%20Incident%20Report%20Form%20Muriel%20Bowser_updated%20062716.pdf" target="_blank">MBSYEP Incident Report Form</a>
-                  <a href="http://does.dc.gov/sites/default/files/dc/sites/does/page_content/attachments/MBSYEP%20Transfer%20Request%20Form%20Muriel%20Bowser_updated%20062716.pdf" target="_blank">MBSYEP Transfer Request Form</a>
-                  <a href="http://does.dc.gov/sites/default/files/dc/sites/does/page_content/attachments/MBSYEP%20Termination%20Request%20Form%20Muriel%20Bowser_updated%20062716.pdf" target="_blank">MBSYEP Termination Request Form</a>
+                <div class="row">
+                  <div class="col-md-12">
+                    <h2>Ask US</h2>
+                    <p>Submit your questions, suggestions and complaints to SYEP program staff.</p>
+                  </div>
                 </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <form class="contact-form" action="index.html" method="post">
+                      <div class="form-group col-xs-6">
+                        <label for="fname">First Name:</label>
+                        <input type="text" class="form-control" id="fname">
+                      </div>
+                      <div class="form-group col-xs-6">
+                        <label for="lname">Last Name:</label>
+                        <input type="text" class="form-control" id="lname">
+                      </div>
+                      <div class="form-group col-xs-6">
+                        <label for="email">Email Address:</label>
+                        <input type="text" class="form-control" id="email">
+                      </div>
+                      <div class="form-group col-xs-6">
+                        <label for="number">Phone Number:</label>
+                        <input type="text" class="form-control" id="number">
+                      </div>
+                      <div class="form-group col-xs-12">
+                        <label for="message">Message:</label>
+                        <textarea class="form-control" rows="5" id="message"></textarea>
+                      </div>
+                      <div class="col-xs-12">
+                        <button type="submit" class="btn btn-default col-xs-12">Submit</button>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="col-md-6">
+                    <p>Service Contact: Office of Youth Services</p>
+                    <p>Contact Email: summerjobs@dc.gov</p>
+                    <p>Contact Phone: (202) 698-3492</p>
+                    <p>Contact Fax: (202) 698-5693</p>
+                    <p>Contact TTY: TTY</p>
+                    <p>Contact Suite#" 2nd Floor</p>
+                    <p>Office Hours: 9 am to 5 pm</p>
+                  </div>
+                </div>
+
+
               </div>
         </div>
       </div>
@@ -95,11 +133,12 @@
                 <p>Sign-up for The Mayor Marion S. Barry Summer Youth Employment mailing list!</p>
               </div>
               <div class="col-md-4">
-                <form>
+                <form id="GD-snippet-form" action="https://public.govdelivery.com/accounts/DCWASH/subscribers/qualify" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="LmP5IFTgenDrWMQgKSiD/JM91zI3zvnFvD1T6RE++rfqkv6fP+wq3WKSMj9zkJAHTfJzgZGUAw/EMKZy/GaWDQ==" />
+                <input type="hidden" name="topic_id" id="topic_id" value="DCWASH_726" />
                   <div class="input-group">
-                    <input type="text" class="form-control" placeholder="example@email.com">
-                    <div class="input-group-btn">
-                      <button class="btn btn-default" type="submit">
+                    <input type="text" class="form-control long" placeholder="example@email.com" id="email" name="email">
+                    <div class="input-group-btn button_panel">
+                      <button class="btn btn-default" type="submit" name="commit" value="Submit" class="form_button">
                         <i class="glyphicon glyphicon-chevron-right"></i>
                       </button>
                     </div>

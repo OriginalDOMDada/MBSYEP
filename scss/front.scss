@@ -69,15 +69,19 @@ body {
     .list {
       padding: 25px 0;
     }
+    .col-date {
+      padding: 15px;
+    }
     .date {
-      height: 250px;
+      height: 150px;
       background-color: white;
-      padding: 10px;
+      padding: 5px;
       border: 2px solid #d1d1d1;
       position: relative;
       h4 {
         color: $blue;
         font-size: 20px;
+        font-family: $nunito;
       }
       p {
         color: $darkgrey;

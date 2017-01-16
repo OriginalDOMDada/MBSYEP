@@ -182,15 +182,18 @@ body .announcements-section {
   padding: 25px; }
   body .announcements-section .list {
     padding: 25px 0; }
+  body .announcements-section .col-date {
+    padding: 15px; }
   body .announcements-section .date {
-    height: 250px;
+    height: 150px;
     background-color: white;
-    padding: 10px;
+    padding: 5px;
     border: 2px solid #d1d1d1;
     position: relative; }
     body .announcements-section .date h4 {
       color: #0e5682;
-      font-size: 20px; }
+      font-size: 20px;
+      font-family: "Nunito", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
     body .announcements-section .date p {
       color: #333333;
       font-size: 16px; }
@@ -378,15 +381,13 @@ body.subpage .documents a {
       height: 50px;
       width: 50px;
       background-size: contain;
-      display: inline-block;
-      -webkit-transform: rotate(45deg);
-      -moz-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-      -o-transform: rotate(45deg);
-      transform: rotate(45deg); }
+      display: inline-block; }
   .question .answer {
     margin: 25px 10px;
     font-size: 18px; }
+
+form.contact-form {
+  text-align: left; }
 
 body {
   font-family: "Open Sans", Arial;
