@@ -43,7 +43,9 @@ body * {
   width: 200px;
   margin: 10px auto 35px;
   .current-number {
-    color: black;
+    color: $green;
+    font-family: $nunito;
+    font-size: 25px;
     margin: auto;
     position: absolute;
     top: 0; left: 0; bottom: 0; right: 0;
@@ -51,6 +53,12 @@ body * {
     height: 30px;
     width: auto;
     z-index: 2;
+    span:last-child {
+      // color: $blue;
+      margin-top: 85px;
+      display: block;
+      font-size: 20px;
+    }
   }
 }
 .pie-chart__pie::before {
@@ -92,6 +100,7 @@ body * {
   margin: 0 auto;
   max-width: 250px;
   width: 100%;
+  margin-top: 35px;
   button {
     width: 100%;
     background-color: $grey;
@@ -122,12 +131,17 @@ body * {
   box-shadow: 1px 1px 0 #DDD, 2px 2px 0 #BBB;
   text-align: left;
   width: 100%;
+  z-index: 10 !important;
 }
 .pie-chart__legend li {
   margin-bottom: 0.7em;
   padding-left: 0.5em;
   border-left: 2.25em solid black;
   // display: none;
+  a {
+    font-size: 12px;
+    padding: 3px 3px 3px 0 !important;
+  }
 }
 .pie-chart__legend em {
   font-style: normal;

@@ -8,6 +8,23 @@ body.subpage {
       line-height: 1.5em;
       font-size: 16px;
     }
+    .col-md-6.col-md-offset-3 {
+      position: relative;
+      height: 100%;
+      button {
+        margin-top: 225px;
+        font-size: 18px;
+        background-color: #fcd804;
+        padding: 10px 20px;
+        border: none;
+        a {
+          color: white;
+          font-family: $open_sans;
+          font-weight: bold;
+          text-decoration: none;
+        }
+      }
+    }
   }
   .documents a{
     display: block;
@@ -16,5 +33,42 @@ body.subpage {
     padding: 10px;
     font-family: $nunito;
 
+  }
+}
+
+.faqs {
+  margin-top: 50px;
+}
+
+.question {
+  font-family: $nunito;
+  button {
+    border-style: none;
+    width: 100%;
+    padding: 25px 10px;
+    background-color: white;
+    border: 1px solid $yellow;
+    font-size: 18px;
+    color: $blue;
+    text-align: left;
+    margin-bottom: 10px;
+    &:before {
+      content: "";
+      background-image: url('css/images/close-button.svg');
+      height: 50px;
+      width: 50px;
+      background-size: contain;
+      display: inline-block;
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+
+    }
+  }
+  .answer {
+    margin: 25px 10px;
+    font-size: 18px;
   }
 }

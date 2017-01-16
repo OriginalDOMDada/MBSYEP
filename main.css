@@ -15,6 +15,17 @@ form {
 .vcenter {
   vertical-align: middle; }
 
+#cboxContent #cboxClose {
+  height: 20px;
+  width: 20px;
+  bottom: 4px; }
+  #cboxContent #cboxClose img {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    top: 0;
+    left: 0; }
+
 body p {
   font-size: 18px;
   font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
@@ -32,13 +43,26 @@ form {
 .vcenter {
   vertical-align: middle; }
 
+#cboxContent #cboxClose {
+  height: 20px;
+  width: 20px;
+  bottom: 4px; }
+  #cboxContent #cboxClose img {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    top: 0;
+    left: 0; }
+
 nav#header {
   border: none;
   background-color: white;
   z-index: 200; }
+  nav#header .navbar-header {
+    z-index: 100;
+    position: relative; }
   nav#header .navbar-brand {
-    height: 110px;
-    padding: 15px 15px; }
+    height: 150px; }
     nav#header .navbar-brand img {
       height: 100%; }
   nav#header .navbar-collapse {
@@ -64,19 +88,23 @@ nav#header {
     -moz-box-shadow: 2px 7px 11px -2px rgba(204, 204, 204, 0.5);
     box-shadow: 2px 7px 11px -2px rgba(204, 204, 204, 0.5); }
     nav#header .nav-message p {
-      font-size: 14px;
+      font-size: 18px;
       margin-bottom: 0;
-      text-align: left;
-      float: left;
+      text-align: center;
       font-weight: bold;
-      margin-top: 5px; }
+      width: 100%;
+      position: absolute;
+      padding: 10px 0; }
     nav#header .nav-message a {
+      font-size: 18px;
       background-color: #fcd804;
       padding: 10px 20px;
       font-weight: bold;
       color: white;
       text-decoration: none;
-      float: right; }
+      float: right;
+      z-index: 20000;
+      position: relative; }
 
 footer {
   position: relative;
@@ -308,12 +336,57 @@ body.subpage .top-section h1 {
 body.subpage .top-section p {
   line-height: 1.5em;
   font-size: 16px; }
+body.subpage .top-section .col-md-6.col-md-offset-3 {
+  position: relative;
+  height: 100%; }
+  body.subpage .top-section .col-md-6.col-md-offset-3 button {
+    margin-top: 225px;
+    font-size: 18px;
+    background-color: #fcd804;
+    padding: 10px 20px;
+    border: none; }
+    body.subpage .top-section .col-md-6.col-md-offset-3 button a {
+      color: white;
+      font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-weight: bold;
+      text-decoration: none; }
 body.subpage .documents a {
   display: block;
   font-size: 18px;
   color: #0e5682;
   padding: 10px;
   font-family: "Nunito", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
+
+.faqs {
+  margin-top: 50px; }
+
+.question {
+  font-family: "Nunito", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
+  .question button {
+    border-style: none;
+    width: 100%;
+    padding: 25px 10px;
+    background-color: white;
+    border: 1px solid #fcd804;
+    font-size: 18px;
+    color: #0e5682;
+    text-align: left;
+    margin-bottom: 10px; }
+    .question button:before {
+      content: "";
+      background-image: url("css/images/close-button.svg");
+      height: 50px;
+      width: 50px;
+      background-size: contain;
+      display: inline-block;
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg); }
+  .question .answer {
+    margin: 25px 10px;
+    font-size: 18px; }
 
 body {
   font-family: "Open Sans", Arial;
@@ -353,7 +426,9 @@ body * {
   width: 200px;
   margin: 10px auto 35px; }
   .pie-chart__pie .current-number {
-    color: black;
+    color: #00ab65;
+    font-family: "Nunito", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-size: 25px;
     margin: auto;
     position: absolute;
     top: 0;
@@ -364,6 +439,10 @@ body * {
     height: 30px;
     width: auto;
     z-index: 2; }
+    .pie-chart__pie .current-number span:last-child {
+      margin-top: 85px;
+      display: block;
+      font-size: 20px; }
 
 .pie-chart__pie::before {
   content: "";
@@ -400,7 +479,8 @@ body * {
   display: table;
   margin: 0 auto;
   max-width: 250px;
-  width: 100%; }
+  width: 100%;
+  margin-top: 35px; }
   .pie-legend button {
     width: 100%;
     background-color: #ebebeb;
@@ -426,12 +506,16 @@ body * {
   font-size: 12px;
   box-shadow: 1px 1px 0 #DDD, 2px 2px 0 #BBB;
   text-align: left;
-  width: 100%; }
+  width: 100%;
+  z-index: 10 !important; }
 
 .pie-chart__legend li {
   margin-bottom: 0.7em;
   padding-left: 0.5em;
   border-left: 2.25em solid black; }
+  .pie-chart__legend li a {
+    font-size: 12px;
+    padding: 3px 3px 3px 0 !important; }
 
 .pie-chart__legend em {
   font-style: normal; }

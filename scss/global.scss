@@ -66,3 +66,16 @@ form {
     vertical-align: middle;
     // float: none;
 }
+
+#cboxContent #cboxClose {
+  height: 20px;
+  width: 20px;
+  bottom: 4px;
+  img {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    top: 0;
+    left: 0;
+  }
+}

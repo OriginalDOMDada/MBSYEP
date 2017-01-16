@@ -60,6 +60,7 @@ var direction = 'h';
     height: '95%',
     maxWidth: '960px',
     maxHeight: '585px',
+    close: '<img class="close-button" src="css/images/close-button.svg">',
     href: function(){
       var videoId = new RegExp('[\\?&]v=([^&#]*)').exec(this.href);
       if (videoId && videoId[1]) {
@@ -259,25 +260,57 @@ $('.pie-chart__legend li').on('click',function(){
     var $this = $(this);
     var chartContainer = $this.closest('.pie-chart--wrapper');
     var currentChart = chartContainer.find('.pie-chart__pie');
+    currentChart.empty();
+
+    function numberCounter() {
+      currentChart.find('.number-value').each(function () {
+          $(this).prop('Counter',0).animate({
+              Counter: $(this).text()
+          }, {
+              duration: 1000,
+              easing: 'swing',
+              step: function (now) {
+                  $(this).text(Math.ceil(now));
+              }
+          });
+      });
+    }
 
     if (chartContainer.hasClass('pieID--micro-skills')) {
-      // currentChart.remove('.current-number');
       createPie('.pieID--micro-skills');
       var currentNumber = $this.find('span')['0'].innerHTML;
+      var totalNumbers = 0;
+      $('.pieID--micro-skills ul li span').each(function(){
+        totalNumbers += Number($(this).text());
+      });
+      var currentPercentage = (parseInt(currentNumber) / totalNumbers) * 100;
       var currentJob = $this.find('em')['0'].innerHTML;
-      $("<div class='current-number'>" + currentNumber + "<br><span>" +currentJob + "</span></div>").appendTo(currentChart);
+      $("<div class='current-number'><span class='number-value'>" + currentPercentage + "</span><span>%</span><br><span>" +currentJob + "</span></div>").appendTo(currentChart);
+      numberCounter();
     }
     if (chartContainer.hasClass('pieID--categories')) {
         createPie('.pieID--categories');
         var currentNumber = $this.find('span')['0'].innerHTML;
+        var totalNumbers = 0;
+        $('.pieID--categories ul li span').each(function(){
+          totalNumbers += Number($(this).text());
+        });
+        var currentPercentage = (parseInt(currentNumber) / totalNumbers) * 100;
         var currentJob = $this.find('em')['0'].innerHTML;
-        $("<div class='current-number'>" + currentNumber + "<br><span>" +currentJob + "</span></div>").appendTo(currentChart);
+        $("<div class='current-number'><span class='number-value'>" + currentPercentage + "</span><span class=>%</span><br><span>" +currentJob + "</span></div>").appendTo(currentChart);
+        numberCounter();
     }
     if (chartContainer.hasClass('pieID--operations')) {
         createPie('.pieID--operations');
         var currentNumber = $this.find('span')['0'].innerHTML;
+        var totalNumbers = 0;
+        $('.pieID--operations ul li span').each(function(){
+          totalNumbers += Number($(this).text());
+        });
+        var currentPercentage = (parseInt(currentNumber) / totalNumbers) * 100;
         var currentJob = $this.find('em')['0'].innerHTML;
-        $("<div class='current-number'>" + currentNumber + "<br><span>" +currentJob + "</span></div>").appendTo(currentChart);
+        $("<div class='current-number'><span class='number-value'>" + currentPercentage + "</span><span class=>%</span><br><span>" +currentJob + "</span></div>").appendTo(currentChart);
+        numberCounter();
     }
   return false;
 });
