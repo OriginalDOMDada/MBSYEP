@@ -13,7 +13,9 @@ form {
   font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
 
 .vcenter {
-  vertical-align: middle; }
+  display: inline-block;
+  vertical-align: middle;
+  float: none !important; }
 
 #cboxContent #cboxClose {
   height: 20px;
@@ -41,7 +43,9 @@ form {
   font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
 
 .vcenter {
-  vertical-align: middle; }
+  display: inline-block;
+  vertical-align: middle;
+  float: none !important; }
 
 #cboxContent #cboxClose {
   height: 20px;
@@ -375,19 +379,42 @@ body.subpage .documents a {
     color: #0e5682;
     text-align: left;
     margin-bottom: 10px; }
-    .question button:before {
-      content: "";
-      background-image: url("css/images/close-button.svg");
-      height: 50px;
-      width: 50px;
-      background-size: contain;
-      display: inline-block; }
+    .question button .col-q-img {
+      padding: 0; }
+      .question button .col-q-img img {
+        max-width: 50px;
+        width: 100%;
+        height: auto; }
   .question .answer {
     margin: 25px 10px;
     font-size: 18px; }
 
+.info {
+  padding-bottom: 25px; }
+
 form.contact-form {
-  text-align: left; }
+  text-align: left;
+  font-size: 18px;
+  font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  padding: 50px 0;
+  display: inline-block; }
+  form.contact-form label {
+    font-family: "Nunito", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    color: #0e5682; }
+  form.contact-form input {
+    border-radius: 0; }
+  form.contact-form button {
+    font-size: 18px;
+    font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    background-color: #fcd804;
+    font-weight: bold;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 0;
+    border: none; }
+    form.contact-form button:hover {
+      background-color: #00ab65;
+      color: white; }
 
 body {
   font-family: "Open Sans", Arial;

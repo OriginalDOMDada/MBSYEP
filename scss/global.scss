@@ -62,9 +62,9 @@ form {
 // }
 
 .vcenter {
-    // display: inline-block;
+    display: inline-block;
     vertical-align: middle;
-    // float: none;
+    float: none !important;
 }
 
 #cboxContent #cboxClose {
