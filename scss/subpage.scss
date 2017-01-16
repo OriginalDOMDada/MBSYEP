@@ -3,6 +3,8 @@ body.subpage {
     h1 {
       font-size: 80px;
       bottom: -225px;
+      text-align: center;
+      display: block;
     }
     p {
       line-height: 1.5em;
@@ -96,6 +98,33 @@ form.contact-form {
     &:hover {
       background-color: $green;
       color: white;
+    }
+  }
+}
+
+
+table.table {
+  margin: 25px 0;
+  border-color: $yellow;
+  th {
+    font-size: 24px;
+    font-family: $nunito;
+    color: $blue;
+    border-color: $yellow !important;
+    text-align: center;
+  }
+  td {
+    font-size: 12px;
+    font-family: $open_sans;
+    font-weight: bold;
+    color: $darkgrey;
+    border-color: $yellow !important;
+    padding: 15px 8px !important;
+    &:nth-child(3) {
+      color: $green;
+    }
+    a {
+      color: $blue;
     }
   }
 }

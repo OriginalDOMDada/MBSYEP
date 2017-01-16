@@ -142,7 +142,7 @@ body svg g {
 body h2 {
   text-align: center;
   color: #00ab65;
-  font-size: 35px; }
+  font-size: 42px; }
 body .top-section {
   background-color: #00ab65;
   height: 90vh;
@@ -348,11 +348,28 @@ body .key-message-section {
     color: white; }
 
 .alternate {
-  background: linear-gradient(rgba(0, 171, 101, 0.75), rgba(0, 171, 101, 0.75)), url("img/IMG_5856_grey.jpg"); }
+  background: linear-gradient(rgba(0, 171, 101, 0.75), rgba(0, 171, 101, 0.75)), url("img/IMG_5856_grey.jpg");
+  background-size: cover !important;
+  background-position: top !important; }
+
+.employers .alternate {
+  background: linear-gradient(rgba(0, 171, 101, 0.75), rgba(0, 171, 101, 0.75)), url("img/host_story.jpg"); }
+
+.faq .alternate {
+  background: linear-gradient(rgba(0, 171, 101, 0.75), rgba(0, 171, 101, 0.75)), url("img/faq_image.jpg"); }
+
+.contact-us .alternate {
+  background: linear-gradient(rgba(0, 171, 101, 0.75), rgba(0, 171, 101, 0.75)), url("img/contact_image.jpg"); }
+
+.youth .alternate {
+  background: linear-gradient(rgba(0, 171, 101, 0.75), rgba(0, 171, 101, 0.75)), url("img/youth_image.jpg");
+  background-position: top !important; }
 
 body.subpage .top-section h1 {
   font-size: 80px;
-  bottom: -225px; }
+  bottom: -225px;
+  text-align: center;
+  display: block; }
 body.subpage .top-section p {
   line-height: 1.5em;
   font-size: 16px; }
@@ -428,6 +445,27 @@ form.contact-form {
     form.contact-form button:hover {
       background-color: #00ab65;
       color: white; }
+
+table.table {
+  margin: 25px 0;
+  border-color: #fcd804; }
+  table.table th {
+    font-size: 24px;
+    font-family: "Nunito", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    color: #0e5682;
+    border-color: #fcd804 !important;
+    text-align: center; }
+  table.table td {
+    font-size: 12px;
+    font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: bold;
+    color: #333333;
+    border-color: #fcd804 !important;
+    padding: 15px 8px !important; }
+    table.table td:nth-child(3) {
+      color: #00ab65; }
+    table.table td a {
+      color: #0e5682; }
 
 body {
   font-family: "Open Sans", Arial;

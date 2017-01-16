@@ -10,7 +10,7 @@ body {
   h2 {
     text-align: center;
     color: $green;
-    font-size: 35px;
+    font-size: 42px;
   }
 
   .top-section {
@@ -284,6 +284,27 @@ body {
   }
 }
 
+
 .alternate {
   background: linear-gradient(rgba(0, 171, 101, 0.75),rgba(0, 171, 101, 0.75)),url('img/IMG_5856_grey.jpg');
+  background-size: cover !important;
+  background-position: top !important;
+}
+
+.employers .alternate {
+  background: linear-gradient(rgba(0, 171, 101, 0.75),rgba(0, 171, 101, 0.75)),url('img/host_story.jpg');
+}
+
+.faq .alternate {
+  background: linear-gradient(rgba(0, 171, 101, 0.75),rgba(0, 171, 101, 0.75)),url('img/faq_image.jpg');
+}
+
+
+.contact-us .alternate {
+  background: linear-gradient(rgba(0, 171, 101, 0.75),rgba(0, 171, 101, 0.75)),url('img/contact_image.jpg');
+}
+
+.youth .alternate {
+  background: linear-gradient(rgba(0, 171, 101, 0.75),rgba(0, 171, 101, 0.75)),url('img/youth_image.jpg');
+  background-position: top !important;
 }
