@@ -245,7 +245,7 @@ body .key-message-section {
     width: 100%;
     margin: 20px auto;
     display: inline-block;
-    background: linear-gradient(rgba(0, 85, 129, 0.5), rgba(0, 85, 129, 0.5)), url("img/sample_1.jpg");
+    background: linear-gradient(rgba(0, 85, 129, 0.5), rgba(0, 85, 129, 0.5)), url("img/video.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -259,7 +259,7 @@ body .key-message-section {
       width: 80px;
       opacity: .7; }
     body .key-message-section .youtube:hover {
-      background: linear-gradient(rgba(51, 51, 51, 0.5), rgba(51, 51, 51, 0.5)), url("img/sample_1.jpg");
+      background: linear-gradient(rgba(51, 51, 51, 0.5), rgba(51, 51, 51, 0.5)), url("img/video.jpg");
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
@@ -275,8 +275,11 @@ body .key-message-section {
   padding: 25px; }
   .stories-section .stories {
     padding: 25px; }
+  .stories-section .col-md-6 .story-2 {
+    background: linear-gradient(rgba(0, 85, 129, 0.5), rgba(0, 85, 129, 0.5)), url("img/host_story.jpg"); }
+  .stories-section .col-md-6 .story-1 {
+    background: linear-gradient(rgba(0, 85, 129, 0.5), rgba(0, 85, 129, 0.5)), url("img/youth_story.jpg"); }
   .stories-section .col-md-6 .story-2, .stories-section .col-md-6 .story-1 {
-    background: linear-gradient(rgba(0, 85, 129, 0.5), rgba(0, 85, 129, 0.5)), url("img/sample_1.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -286,16 +289,21 @@ body .key-message-section {
       position: absolute;
       width: 100%;
       height: auto;
-      bottom: 25px; }
+      bottom: 100px; }
       .stories-section .col-md-6 .story-2 .content h3, .stories-section .col-md-6 .story-1 .content h3 {
         color: white;
         padding-bottom: 25px;
-        padding: 20px; }
+        padding: 20px;
+        font-size: 42px; }
       .stories-section .col-md-6 .story-2 .content a, .stories-section .col-md-6 .story-1 .content a {
         color: white;
-        padding: 10px 15px;
+        padding: 10px 25px;
         border: 2px solid white;
-        text-decoration: none; }
+        text-decoration: none;
+        font-size: 18px;
+        font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
+        .stories-section .col-md-6 .story-2 .content a span, .stories-section .col-md-6 .story-1 .content a span {
+          font-weight: bold; }
 
 .gallery-section {
   padding: 50px;
@@ -306,11 +314,16 @@ body .key-message-section {
       font-style: italic;
       font-size: 14px;
       padding-bottom: 10px; }
+    .gallery-section .social-icons a {
+      text-decoration: none;
+      display: inline-block;
+      height: 50px;
+      margin: 0 10px;
+      width: auto; }
     .gallery-section .social-icons svg {
       display: inline-block;
       height: 50px;
-      width: auto;
-      margin: 0 10px; }
+      width: auto; }
 
 .email-section {
   background-color: #00ab65;
