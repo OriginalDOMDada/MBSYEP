@@ -26,7 +26,7 @@ body {
       display: table-cell;
       // vertical-align: middle;
       color: white;
-      line-height: 1.1em;
+      line-height: 1em;
       z-index: 100;
       bottom: -225px;
       position: relative;
@@ -34,9 +34,10 @@ body {
         display: block;
         &.yellow-title {
           font-family: $open_sans;
-          font-size: 30px;
+          font-size: 42px;
           color: $yellow;
           font-style: italic;
+          line-height: 1em;
         }
       }
       img {
@@ -150,7 +151,6 @@ body {
       background-size: cover;
       background-repeat: no-repeat;
       border: 2px solid white;
-      opacity: 1;
       transition: all .5s linear;
       -webkit-transition: all .5s linear;
       svg#play {
@@ -164,7 +164,6 @@ body {
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        opacity: .9;
         svg#play g {
           // fill: $blue;
           opacity: 1;
@@ -286,7 +285,7 @@ body {
 
 
 .alternate {
-  background: linear-gradient(rgba(0, 171, 101, 0.75),rgba(0, 171, 101, 0.75)),url('img/IMG_5856_grey.jpg');
+  background: linear-gradient(rgba(0, 171, 101, 0.75),rgba(0, 171, 101, 0.75)),url('img/keiser.jpg');
   background-size: cover !important;
   background-position: top !important;
 }

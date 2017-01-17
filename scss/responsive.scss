@@ -6,11 +6,22 @@
 }
 @media screen and (max-width: $md) {
 
-nav#header .navbar-collapse ul.nav {
-  position: relative;
-  bottom: inital;
-  right: inital;
+nav#header {
+  .navbar-toggle {
+    border-color: white;
+  }
+  .navbar-toggle:focus, .navbar-toggle:hover{
+    background-color: white;
+  }
+  .navbar-collapse ul.nav {
+    position: relative;
+    bottom: inital;
+    right: inital;
+    margin-top: 20px;
+  }
 }
+
+
 }
 @media screen and (max-width: $lg) {
 

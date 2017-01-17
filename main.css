@@ -4,7 +4,7 @@ body p {
 body h2, body h3 {
   font-family: "Nunito", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
 body h1 {
-  font-size: 50px; }
+  font-size: 80px; }
 
 #cboxOverlay {
   background-color: white; }
@@ -34,7 +34,7 @@ body p {
 body h2, body h3 {
   font-family: "Nunito", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
 body h1 {
-  font-size: 50px; }
+  font-size: 80px; }
 
 #cboxOverlay {
   background-color: white; }
@@ -131,10 +131,15 @@ footer {
       vertical-align: bottom; }
 
 @media screen and (max-width: 992px) {
+  nav#header .navbar-toggle {
+    border-color: white; }
+  nav#header .navbar-toggle:focus, nav#header .navbar-toggle:hover {
+    background-color: white; }
   nav#header .navbar-collapse ul.nav {
     position: relative;
     bottom: inital;
-    right: inital; } }
+    right: inital;
+    margin-top: 20px; } }
 body svg g {
   visibility: visible;
   opacity: 1;
@@ -155,7 +160,7 @@ body .top-section {
     text-align: center;
     display: table-cell;
     color: white;
-    line-height: 1.1em;
+    line-height: 1em;
     z-index: 100;
     bottom: -225px;
     position: relative; }
@@ -163,9 +168,10 @@ body .top-section {
       display: block; }
       body .top-section h1 span.yellow-title {
         font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-        font-size: 30px;
+        font-size: 42px;
         color: #fcd804;
-        font-style: italic; }
+        font-style: italic;
+        line-height: 1em; }
     body .top-section h1 img {
       width: 200px;
       height: auto; }
@@ -250,7 +256,6 @@ body .key-message-section {
     background-size: cover;
     background-repeat: no-repeat;
     border: 2px solid white;
-    opacity: 1;
     transition: all .5s linear;
     -webkit-transition: all .5s linear; }
     body .key-message-section .youtube svg#play {
@@ -262,8 +267,7 @@ body .key-message-section {
       background: linear-gradient(rgba(51, 51, 51, 0.5), rgba(51, 51, 51, 0.5)), url("img/video.jpg");
       background-position: center;
       background-size: cover;
-      background-repeat: no-repeat;
-      opacity: .9; }
+      background-repeat: no-repeat; }
       body .key-message-section .youtube:hover svg#play g {
         opacity: 1; }
 
@@ -348,7 +352,7 @@ body .key-message-section {
     color: white; }
 
 .alternate {
-  background: linear-gradient(rgba(0, 171, 101, 0.75), rgba(0, 171, 101, 0.75)), url("img/IMG_5856_grey.jpg");
+  background: linear-gradient(rgba(0, 171, 101, 0.75), rgba(0, 171, 101, 0.75)), url("img/keiser.jpg");
   background-size: cover !important;
   background-position: top !important; }
 
