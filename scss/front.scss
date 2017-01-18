@@ -28,7 +28,7 @@ body {
       color: white;
       line-height: 1em;
       z-index: 100;
-      bottom: -225px;
+      bottom: -250px;
       position: relative;
       span {
         display: block;
@@ -265,6 +265,7 @@ body {
     vertical-align: bottom;
     height: 34px;
     line-height: 34px;
+    font-weight: bold;
   }
   form {
     * {
@@ -284,23 +285,26 @@ body {
 }
 
 
-.alternate {
-  background: linear-gradient(rgba(0, 171, 101, 0.75),rgba(0, 171, 101, 0.75)),url('img/keiser.jpg');
-  background-size: cover !important;
-  background-position: top !important;
+.front .alternate {
+  background: linear-gradient(rgba(0, 171, 101, 0.75),rgba(0, 171, 101, 0.75)),url('img/MB_speaking.jpg');
+  background-size: 100% !important;
+  background-position: center 150px !important;
 }
 
 .employers .alternate {
   background: linear-gradient(rgba(0, 171, 101, 0.75),rgba(0, 171, 101, 0.75)),url('img/host_story.jpg');
+  background-size: 100% !important;
 }
 
 .faq .alternate {
   background: linear-gradient(rgba(0, 171, 101, 0.75),rgba(0, 171, 101, 0.75)),url('img/faq_image.jpg');
+  background-size: 100% !important;
 }
 
 
 .contact-us .alternate {
   background: linear-gradient(rgba(0, 171, 101, 0.75),rgba(0, 171, 101, 0.75)),url('img/contact_image.jpg');
+  background-size: 100% !important;
 }
 
 .youth .alternate {

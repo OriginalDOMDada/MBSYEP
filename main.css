@@ -1,10 +1,12 @@
-body p {
-  font-size: 18px;
-  font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
-body h2, body h3 {
-  font-family: "Nunito", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
-body h1 {
-  font-size: 80px; }
+body {
+  overflow-x: hidden; }
+  body p {
+    font-size: 18px;
+    font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
+  body h2, body h3 {
+    font-family: "Nunito", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
+  body h1 {
+    font-size: 80px; }
 
 #cboxOverlay {
   background-color: white; }
@@ -28,13 +30,15 @@ form {
     top: 0;
     left: 0; }
 
-body p {
-  font-size: 18px;
-  font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
-body h2, body h3 {
-  font-family: "Nunito", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
-body h1 {
-  font-size: 80px; }
+body {
+  overflow-x: hidden; }
+  body p {
+    font-size: 18px;
+    font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
+  body h2, body h3 {
+    font-family: "Nunito", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
+  body h1 {
+    font-size: 80px; }
 
 #cboxOverlay {
   background-color: white; }
@@ -122,24 +126,70 @@ footer {
     padding: 50px 25px !important; }
     footer #footer .footer-images {
       width: 100%;
-      height: 120px; }
+      min-height: 120px; }
     footer #footer img {
-      min-width: 170px;
-      max-height: 110px;
+      width: 30%;
+      padding: 0 20px;
       display: inline-block;
-      margin: 0 20px;
-      vertical-align: bottom; }
+      vertical-align: middle;
+      border: 0; }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 480px) {
+  .row table.table th {
+    font-size: 14px; }
+  .row table.table td {
+    font-size: 9px;
+    padding: 10px 6px !important; }
+
+  #footer .footer-images img {
+    width: 50%;
+    margin: 15px 0; } }
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 58px !important; }
+
+  body.subpage .top-section h1 {
+    font-size: 60px !important; }
+
   nav#header .navbar-toggle {
     border-color: white; }
   nav#header .navbar-toggle:focus, nav#header .navbar-toggle:hover {
     background-color: white; }
-  nav#header .navbar-collapse ul.nav {
+  nav#header #navbar ul {
     position: relative;
-    bottom: inital;
-    right: inital;
-    margin-top: 20px; } }
+    bottom: initial;
+    right: initial;
+    margin-top: 20px; }
+  nav#header .nav-message {
+    padding: 0; }
+    nav#header .nav-message .row a {
+      width: 100%;
+      display: block;
+      margin: 0 !important;
+      font-size: 14px; }
+    nav#header .nav-message .row p {
+      display: block;
+      position: relative;
+      font-size: 12px; } }
+@media screen and (max-width: 992px) {
+  body .email-section p {
+    font-size: 12px;
+    display: block;
+    text-align: center;
+    padding: 10px 0; }
+  body .row.stories .col-md-6 {
+    padding: 10px; }
+
+  nav#header #navbar ul li a {
+    font-size: 16px; }
+  nav#header .nav-message a {
+    margin: 0 15px; }
+  nav#header .nav-message p {
+    font-size: 16px; } }
+@media screen and (max-width: 1200px) {
+  body .email-section p {
+    font-size: 13px;
+    height: initial; } }
 body svg g {
   visibility: visible;
   opacity: 1;
@@ -162,7 +212,7 @@ body .top-section {
     color: white;
     line-height: 1em;
     z-index: 100;
-    bottom: -225px;
+    bottom: -250px;
     position: relative; }
     body .top-section h1 span {
       display: block; }
@@ -340,7 +390,8 @@ body .key-message-section {
     font-size: 16px;
     vertical-align: bottom;
     height: 34px;
-    line-height: 34px; }
+    line-height: 34px;
+    font-weight: bold; }
   .email-section form * {
     border-radius: 0; }
   .email-section form .btn {
@@ -351,19 +402,22 @@ body .key-message-section {
   .email-section form .glyphicon {
     color: white; }
 
-.alternate {
-  background: linear-gradient(rgba(0, 171, 101, 0.75), rgba(0, 171, 101, 0.75)), url("img/keiser.jpg");
-  background-size: cover !important;
-  background-position: top !important; }
+.front .alternate {
+  background: linear-gradient(rgba(0, 171, 101, 0.75), rgba(0, 171, 101, 0.75)), url("img/MB_speaking.jpg");
+  background-size: 100% !important;
+  background-position: center 150px !important; }
 
 .employers .alternate {
-  background: linear-gradient(rgba(0, 171, 101, 0.75), rgba(0, 171, 101, 0.75)), url("img/host_story.jpg"); }
+  background: linear-gradient(rgba(0, 171, 101, 0.75), rgba(0, 171, 101, 0.75)), url("img/host_story.jpg");
+  background-size: 100% !important; }
 
 .faq .alternate {
-  background: linear-gradient(rgba(0, 171, 101, 0.75), rgba(0, 171, 101, 0.75)), url("img/faq_image.jpg"); }
+  background: linear-gradient(rgba(0, 171, 101, 0.75), rgba(0, 171, 101, 0.75)), url("img/faq_image.jpg");
+  background-size: 100% !important; }
 
 .contact-us .alternate {
-  background: linear-gradient(rgba(0, 171, 101, 0.75), rgba(0, 171, 101, 0.75)), url("img/contact_image.jpg"); }
+  background: linear-gradient(rgba(0, 171, 101, 0.75), rgba(0, 171, 101, 0.75)), url("img/contact_image.jpg");
+  background-size: 100% !important; }
 
 .youth .alternate {
   background: linear-gradient(rgba(0, 171, 101, 0.75), rgba(0, 171, 101, 0.75)), url("img/youth_image.jpg");
