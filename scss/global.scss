@@ -14,6 +14,12 @@ body {
   }
 }
 
+body.front {
+  h1 {
+    font-size: 60px;
+    bottom: -300px !important;
+  }
+}
 #cboxOverlay {
   background-color: white;
 }

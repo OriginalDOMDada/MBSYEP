@@ -8,6 +8,10 @@ body {
   body h1 {
     font-size: 80px; }
 
+body.front h1 {
+  font-size: 60px;
+  bottom: -300px !important; }
+
 #cboxOverlay {
   background-color: white; }
 
@@ -39,6 +43,10 @@ body {
     font-family: "Nunito", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
   body h1 {
     font-size: 80px; }
+
+body.front h1 {
+  font-size: 60px;
+  bottom: -300px !important; }
 
 #cboxOverlay {
   background-color: white; }
@@ -218,10 +226,10 @@ body .top-section {
       display: block; }
       body .top-section h1 span.yellow-title {
         font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-        font-size: 42px;
+        font-size: 50px;
         color: #fcd804;
         font-style: italic;
-        line-height: 1em; }
+        line-height: 1.5em; }
     body .top-section h1 img {
       width: 200px;
       height: auto; }
@@ -476,6 +484,8 @@ body.subpage .documents a {
   .question .answer {
     margin: 25px 10px;
     font-size: 18px; }
+    .question .answer ul {
+      list-style-type: none; }
 
 .info {
   padding-bottom: 25px; }

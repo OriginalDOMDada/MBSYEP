@@ -66,6 +66,9 @@ body.subpage {
   .answer {
     margin: 25px 10px;
     font-size: 18px;
+    ul {
+      list-style-type: none;
+    }
   }
 }
 
