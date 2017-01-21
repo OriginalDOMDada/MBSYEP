@@ -34,6 +34,11 @@ form {
     top: 0;
     left: 0; }
 
+.down-arrow svg {
+  height: 50px;
+  width: 50px;
+  margin-top: 10px; }
+
 body {
   overflow-x: hidden; }
   body p {
@@ -70,10 +75,15 @@ form {
     top: 0;
     left: 0; }
 
+.down-arrow svg {
+  height: 50px;
+  width: 50px;
+  margin-top: 10px; }
+
 nav#header {
   border: none;
   background-color: white;
-  z-index: 200; }
+  z-index: 1500; }
   nav#header .navbar-header {
     z-index: 100;
     position: relative; }
@@ -91,10 +101,20 @@ nav#header {
         font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
         font-weight: bold;
         font-size: 24px;
-        color: #0e5682;
-        border-bottom: 5px solid white; }
-        nav#header .navbar-collapse ul.nav a:hover {
-          border-bottom: 5px solid #00ab65; }
+        color: #0e5682; }
+        nav#header .navbar-collapse ul.nav a.hvr-underline-reveal:before {
+          background: #00ab65;
+          width: 90%;
+          margin: 0 5%; }
+        nav#header .navbar-collapse ul.nav a.active:before {
+          -webkit-transform: none;
+          transform: none;
+          -webkit-transition-property: transform;
+          transition-property: transform;
+          -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+          -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out; }
   nav#header .nav-message {
     position: relative;
     padding: 15px 0;
@@ -113,14 +133,18 @@ nav#header {
       padding: 10px 0; }
     nav#header .nav-message a {
       font-size: 18px;
-      background-color: #fcd804;
+      background-color: #00ab65;
       padding: 10px 20px;
       font-weight: bold;
       color: white;
       text-decoration: none;
       float: right;
       z-index: 20000;
-      position: relative; }
+      position: relative;
+      display: inline-block;
+      vertical-align: middle; }
+      nav#header .nav-message a.hvr-rectangle-in:before {
+        background-color: #fcd804; }
 
 footer {
   position: relative;
@@ -151,8 +175,25 @@ footer {
 
   #footer .footer-images img {
     width: 50%;
-    margin: 15px 0; } }
+    margin: 15px 0; }
+
+  .pie-charts .col-sm-4 {
+    width: 100%; }
+
+  .horizontal-section .row h3 {
+    padding-top: 0; } }
 @media screen and (max-width: 768px) {
+  body.front .top-section.alternate {
+    margin-top: 225px;
+    height: 300px;
+    background-position: center !important;
+    background-size: cover !important; }
+    body.front .top-section.alternate h1 {
+      bottom: -25px !important;
+      font-size: 50px !important; }
+      body.front .top-section.alternate h1 span.yellow-title {
+        font-size: 30px; }
+
   h1 {
     font-size: 58px !important; }
 
@@ -178,7 +219,12 @@ footer {
     nav#header .nav-message .row p {
       display: block;
       position: relative;
-      font-size: 12px; } }
+      font-size: 12px; }
+
+  .horizontal-section .row h3 {
+    font-size: 25px; }
+    .horizontal-section .row h3 span {
+      font-size: 14px; } }
 @media screen and (max-width: 992px) {
   body .email-section p {
     font-size: 12px;
@@ -187,6 +233,8 @@ footer {
     padding: 10px 0; }
   body .row.stories .col-md-6 {
     padding: 10px; }
+  body.contact-us .alternate, body.employers .alternate, body.faq .alternate, body.youth .alternate {
+    background-position: center 150px !important; }
 
   nav#header #navbar ul li a {
     font-size: 16px; }
@@ -197,7 +245,9 @@ footer {
 @media screen and (max-width: 1200px) {
   body .email-section p {
     font-size: 13px;
-    height: initial; } }
+    height: initial; }
+  body .horizontal-section .row h3 {
+    font-size: 30px; } }
 body svg g {
   visibility: visible;
   opacity: 1;
@@ -207,8 +257,7 @@ body h2 {
   color: #00ab65;
   font-size: 42px; }
 body .top-section {
-  background-color: #00ab65;
-  height: 90vh;
+  height: 600px;
   width: 100vw;
   display: table;
   position: relative; }
@@ -254,16 +303,17 @@ body .announcements-section {
     padding: 15px; }
   body .announcements-section .date {
     height: 150px;
-    background-color: white;
+    background-image: url("background.jpg");
+    background-attachment: fixed;
     padding: 5px;
-    border: 2px solid #d1d1d1;
+    border: 2px solid white;
     position: relative; }
     body .announcements-section .date h4 {
-      color: #0e5682;
+      color: white;
       font-size: 20px;
       font-family: "Nunito", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
     body .announcements-section .date p {
-      color: #333333;
+      color: white;
       font-size: 16px; }
     body .announcements-section .date .button-wrapper {
       width: 100%;
@@ -277,14 +327,14 @@ body .announcements-section {
         background-color: #fcd804;
         margin: 0 5px;
         border-radius: 0;
-        border-color: #ebebeb; }
+        border-color: white; }
         body .announcements-section .date .button-wrapper button .glyphicon {
-          color: white; }
+          color: #ebebeb; }
 body .horizontal-section {
   background-color: #fcd804;
   height: 200px;
   width: 100%;
-  background-image: url("block-pattern.svg");
+  background-image: url("img/block-pattern.jpg");
   background-repeat: repeat;
   background-size: 500px;
   padding: 25px; }
@@ -309,7 +359,7 @@ body .key-message-section {
     width: 100%;
     margin: 20px auto;
     display: inline-block;
-    background: linear-gradient(rgba(0, 85, 129, 0.5), rgba(0, 85, 129, 0.5)), url("img/video.jpg");
+    background: url("img/video.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -320,9 +370,9 @@ body .key-message-section {
       margin-top: 125px;
       height: 80px;
       width: 80px;
-      opacity: .7; }
+      opacity: 1; }
     body .key-message-section .youtube:hover {
-      background: linear-gradient(rgba(51, 51, 51, 0.5), rgba(51, 51, 51, 0.5)), url("img/video.jpg");
+      background: url("img/video-hover.jpg");
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat; }
@@ -333,14 +383,13 @@ body .key-message-section {
   padding: 25px; }
 
 .stories-section {
-  background-color: #ebebeb;
   padding: 25px; }
   .stories-section .stories {
     padding: 25px; }
   .stories-section .col-md-6 .story-2 {
-    background: linear-gradient(rgba(0, 85, 129, 0.5), rgba(0, 85, 129, 0.5)), url("img/host_story.jpg"); }
+    background: url("img/host_story.jpg"); }
   .stories-section .col-md-6 .story-1 {
-    background: linear-gradient(rgba(0, 85, 129, 0.5), rgba(0, 85, 129, 0.5)), url("img/youth_story.jpg"); }
+    background: url("img/youth_story.jpg"); }
   .stories-section .col-md-6 .story-2, .stories-section .col-md-6 .story-1 {
     background-position: center;
     background-size: cover;
@@ -363,7 +412,9 @@ body .key-message-section {
         border: 2px solid white;
         text-decoration: none;
         font-size: 18px;
-        font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
+        font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        height: 100%;
+        width: 100%; }
         .stories-section .col-md-6 .story-2 .content a span, .stories-section .col-md-6 .story-1 .content a span {
           font-weight: bold; }
 
@@ -411,24 +462,24 @@ body .key-message-section {
     color: white; }
 
 .front .alternate {
-  background: linear-gradient(rgba(0, 171, 101, 0.75), rgba(0, 171, 101, 0.75)), url("img/MB_speaking.jpg");
+  background: url("img/MB_speaking.jpg") no-repeat;
   background-size: 100% !important;
   background-position: center 150px !important; }
 
 .employers .alternate {
-  background: linear-gradient(rgba(0, 171, 101, 0.75), rgba(0, 171, 101, 0.75)), url("img/host_story.jpg");
+  background: url("img/employers_image.jpg") no-repeat;
   background-size: 100% !important; }
 
 .faq .alternate {
-  background: linear-gradient(rgba(0, 171, 101, 0.75), rgba(0, 171, 101, 0.75)), url("img/faq_image.jpg");
+  background: url("img/faq_image.jpg") no-repeat;
   background-size: 100% !important; }
 
 .contact-us .alternate {
-  background: linear-gradient(rgba(0, 171, 101, 0.75), rgba(0, 171, 101, 0.75)), url("img/contact_image.jpg");
+  background: url("img/contact_image.jpg") no-repeat;
   background-size: 100% !important; }
 
 .youth .alternate {
-  background: linear-gradient(rgba(0, 171, 101, 0.75), rgba(0, 171, 101, 0.75)), url("img/youth_image.jpg");
+  background: url("img/youth_image.jpg") no-repeat;
   background-position: top !important; }
 
 body.subpage .top-section h1 {
@@ -557,7 +608,7 @@ body * {
   font-family: "Open Sans", Arial; }
 
 .pie-chart--wrapper {
-  width: 400px;
+  width: 100%;
   margin: 30px auto;
   text-align: center; }
   .pie-chart--wrapper h2 {
@@ -656,6 +707,9 @@ body * {
   width: 100%;
   z-index: 10 !important; }
 
+.dropdown-menu {
+  z-index: 1000 !important; }
+
 .pie-chart__legend li {
   margin-bottom: 0.7em;
   padding-left: 0.5em;
@@ -684,7 +738,7 @@ body * {
   -ms-flex-direction: row;
   flex-direction: row; }
 
-@media (max-width: 500px) {
+@media (max-width: 767px) {
   .pie-charts {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

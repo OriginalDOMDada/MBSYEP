@@ -14,8 +14,9 @@ body {
   }
 
   .top-section {
-    background-color: $green;
-    height: 90vh;
+    // background-color: $green;
+    // background-repeat: no-repeat;
+    height: 600px;
     width: 100vw;
     display: table;
     position: relative;
@@ -75,17 +76,19 @@ body {
     }
     .date {
       height: 150px;
-      background-color: white;
+      background-image: url('background.jpg');
+      // background-position: center;
+      background-attachment: fixed;
       padding: 5px;
-      border: 2px solid #d1d1d1;
+      border: 2px solid white;
       position: relative;
       h4 {
-        color: $blue;
+        color: white;
         font-size: 20px;
         font-family: $nunito;
       }
       p {
-        color: $darkgrey;
+        color: white;
         font-size: 16px;
       }
       .button-wrapper {
@@ -100,9 +103,9 @@ body {
             background-color: $yellow;
             margin: 0 5px;
             border-radius: 0;
-            border-color: $grey;
+            border-color: white;
             .glyphicon {
-              color: white;
+              color: $grey;
             }
           }
       }
@@ -116,7 +119,7 @@ body {
     background-color: $yellow;
     height: 200px;
     width: 100%;
-    background-image: url('block-pattern.svg');
+    background-image: url('img/block-pattern.jpg');
     background-repeat: repeat;
     background-size: 500px;
     padding: 25px;
@@ -146,7 +149,7 @@ body {
       width: 100%;
       margin: 20px auto;
       display: inline-block;
-      background:linear-gradient(rgba(0, 85, 129, 0.5),rgba(0, 85, 129, 0.5)),url('img/video.jpg');
+      background: url('img/video.jpg');
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
@@ -157,10 +160,10 @@ body {
         margin-top: 125px;
         height: 80px;
         width: 80px;
-        opacity: .7;
+        opacity: 1;
       }
       &:hover {
-        background: linear-gradient(rgba(51, 51, 51, 0.5),rgba(51, 51, 51, 0.5)),url('img/video.jpg');
+        background: url('img/video-hover.jpg');
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -178,17 +181,17 @@ body {
 }
 
 .stories-section {
-  background-color: $grey;
+  // background-color: $grey;
   padding: 25px;
   .stories {
     padding: 25px;
   }
   .col-md-6 {
     .story-2 {
-      background:linear-gradient(rgba(0, 85, 129, 0.5),rgba(0, 85, 129, 0.5)),url('img/host_story.jpg');
+      background: url('img/host_story.jpg');
     }
     .story-1 {
-      background:linear-gradient(rgba(0, 85, 129, 0.5),rgba(0, 85, 129, 0.5)),url('img/youth_story.jpg');
+      background: url('img/youth_story.jpg');
     }
     .story-2, .story-1 {
       // background:linear-gradient(rgba(0, 85, 129, 0.5),rgba(0, 85, 129, 0.5)),url('img/sample_1.jpg');
@@ -215,6 +218,8 @@ body {
           text-decoration: none;
           font-size: 18px;
           font-family: $open_sans;
+          height: 100%;
+          width: 100%;
           span {
             font-weight: bold;
           }
@@ -286,28 +291,28 @@ body {
 
 
 .front .alternate {
-  background: linear-gradient(rgba(0, 171, 101, 0.75),rgba(0, 171, 101, 0.75)),url('img/MB_speaking.jpg');
+  background: url('img/MB_speaking.jpg') no-repeat;
   background-size: 100% !important;
   background-position: center 150px !important;
 }
 
 .employers .alternate {
-  background: linear-gradient(rgba(0, 171, 101, 0.75),rgba(0, 171, 101, 0.75)),url('img/host_story.jpg');
+  background: url('img/employers_image.jpg') no-repeat;
   background-size: 100% !important;
 }
 
 .faq .alternate {
-  background: linear-gradient(rgba(0, 171, 101, 0.75),rgba(0, 171, 101, 0.75)),url('img/faq_image.jpg');
+  background: url('img/faq_image.jpg') no-repeat;
   background-size: 100% !important;
 }
 
 
 .contact-us .alternate {
-  background: linear-gradient(rgba(0, 171, 101, 0.75),rgba(0, 171, 101, 0.75)),url('img/contact_image.jpg');
+  background: url('img/contact_image.jpg') no-repeat;
   background-size: 100% !important;
 }
 
 .youth .alternate {
-  background: linear-gradient(rgba(0, 171, 101, 0.75),rgba(0, 171, 101, 0.75)),url('img/youth_image.jpg');
+  background: url('img/youth_image.jpg') no-repeat;
   background-position: top !important;
 }

@@ -26,7 +26,8 @@ body * {
   font-family: "Open Sans", Arial;
 }
 .pie-chart--wrapper {
-  width: 400px;
+  // max-width: 400px;
+  width: 100%;
   margin: 30px auto;
   text-align: center;
   h2 {
@@ -133,6 +134,10 @@ body * {
   width: 100%;
   z-index: 10 !important;
 }
+
+.dropdown-menu {
+  z-index: 1000 !important;
+}
 .pie-chart__legend li {
   margin-bottom: 0.7em;
   padding-left: 0.5em;
@@ -168,7 +173,7 @@ body * {
       -ms-flex-direction: row;
           flex-direction: row;
 }
-@media (max-width: 500px) {
+@media (max-width: 767px) {
   .pie-charts {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

@@ -54,9 +54,15 @@ var direction = 'h';
 
   $(window).on('wheel', function(e) {
   	var delta = e.originalEvent.deltaY;
-    current -= 1;
+    // console.log(delta);
+    // current -= 1;
     up = current;
     if (delta > 0){
+      current -= 2;
+      $('div.horizontal-section').css("backgroundPosition", (direction == 'h') ? current+"px 0" : "0 " + current+"px");
+    }
+    else {
+      current -= -2;
       $('div.horizontal-section').css("backgroundPosition", (direction == 'h') ? current+"px 0" : "0 " + current+"px");
     }
   });
@@ -263,7 +269,7 @@ var direction = 'h';
 //     });
 // });
 
-$('.pie-chart__legend li').on('click',function(){
+$('.pie-chart__legend li a').on('click',function(){
     var $this = $(this);
     var chartContainer = $this.closest('.pie-chart--wrapper');
     var currentChart = chartContainer.find('.pie-chart__pie');
