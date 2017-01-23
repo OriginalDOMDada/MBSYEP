@@ -111,7 +111,7 @@
       p {
         font-size: 12px;
         display: block;
-        text-align: center;
+        text-align: center !important;
         padding: 10px 0;
       }
     }
@@ -152,6 +152,17 @@
 }
 @media screen and (max-width: $lg) {
   body {
+
+
+    nav#header .nav-message {
+      p {
+        font-size: 14px;
+      }
+      a {
+        padding: 8px 12px;
+        font-size: 14px;
+      }
+    }
     .email-section {
       p {
         font-size: 13px;

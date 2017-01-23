@@ -229,7 +229,7 @@ footer {
   body .email-section p {
     font-size: 12px;
     display: block;
-    text-align: center;
+    text-align: center !important;
     padding: 10px 0; }
   body .row.stories .col-md-6 {
     padding: 10px; }
@@ -243,6 +243,11 @@ footer {
   nav#header .nav-message p {
     font-size: 16px; } }
 @media screen and (max-width: 1200px) {
+  body nav#header .nav-message p {
+    font-size: 14px; }
+  body nav#header .nav-message a {
+    padding: 8px 12px;
+    font-size: 14px; }
   body .email-section p {
     font-size: 13px;
     height: initial; }
@@ -442,7 +447,7 @@ body .key-message-section {
   background-color: #00ab65;
   padding: 20px; }
   .email-section p {
-    text-align: left;
+    text-align: right;
     color: white;
     font-style: italic;
     margin-bottom: 0;
@@ -744,3 +749,5 @@ body * {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column; } }
+
+/*# sourceMappingURL=main.css.map */

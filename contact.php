@@ -56,8 +56,8 @@ if (!$errName && !$errEmail && !$errMessage) {
 
 
   <!-- bootstrap -->
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <script src="js/bootstrap.min.js"></script>
 
 
   <!-- justified -->
@@ -194,7 +194,7 @@ if (!$errName && !$errEmail && !$errMessage) {
                 <p>Sign-up to receive the latest updates about MBSYEP!</p>
               </div>
               <div class="col-md-4">
-                <form id="GD-snippet-form" action="https://public.govdelivery.com/accounts/DCWASH/subscribers/qualify" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="LmP5IFTgenDrWMQgKSiD/JM91zI3zvnFvD1T6RE++rfqkv6fP+wq3WKSMj9zkJAHTfJzgZGUAw/EMKZy/GaWDQ==" />
+                <form id="GD-snippet-form" action="https://public.govdelivery.com/accounts/DCWASH/subscribers/qualify" accept-charset="UTF-8" method="post" target="_blank"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="LmP5IFTgenDrWMQgKSiD/JM91zI3zvnFvD1T6RE++rfqkv6fP+wq3WKSMj9zkJAHTfJzgZGUAw/EMKZy/GaWDQ==" />
                 <input type="hidden" name="topic_id" id="topic_id" value="DCWASH_726" />
                   <div class="input-group">
                     <input type="text" class="form-control long" placeholder="example@email.com" id="email" name="email">
