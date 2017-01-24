@@ -1,42 +1,3 @@
-
-<?php
-	if (isset($_POST["submit"])) {
-		$fname = $_POST['fname'];
-    $lname = $_POST['lname'];
-		$email = $_POST['email'];
-    $number = $_POST['number'];
-		$message = $_POST['message'];
-		$from = 'Demo Contact Form';
-		$to = 'willmannie@gmail.com';
-		$subject = 'Message from Contact Demo ';
-
-		$body ="From: $fname + ' ' + $lname\n E-Mail: $email\n Number: $number\n Message:\n $message";
-		// Check if name has been entered
-		if (!$_POST['fname'] && !$_POST['lname']) {
-			$errName = 'Please enter your full name';
-		}
-
-		// Check if email has been entered and is valid
-		if (!$_POST['email'] || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-			$errEmail = 'Please enter a valid email address';
-		}
-
-		//Check if message has been entered
-		if (!$_POST['message']) {
-			$errMessage = 'Please enter your message';
-		}
-
-// If there are no errors, send the email
-if (!$errName && !$errEmail && !$errMessage) {
-	if (mail ($to, $subject, $body, $from)) {
-		$result='<div class="alert alert-success">Thank You! I will be in touch</div>';
-	} else {
-		$result='<div class="alert alert-danger">Sorry there was an error sending your message. Please try again later.</div>';
-	}
-}
-	}
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -194,7 +155,7 @@ if (!$errName && !$errEmail && !$errMessage) {
                 <p>Sign-up to receive the latest updates about MBSYEP!</p>
               </div>
               <div class="col-md-4">
-                <form id="GD-snippet-form" action="https://public.govdelivery.com/accounts/DCWASH/subscribers/qualify" accept-charset="UTF-8" method="post" target="_blank"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="LmP5IFTgenDrWMQgKSiD/JM91zI3zvnFvD1T6RE++rfqkv6fP+wq3WKSMj9zkJAHTfJzgZGUAw/EMKZy/GaWDQ==" />
+                <!-- <form id="GD-snippet-form" action="https://public.govdelivery.com/accounts/DCWASH/subscribers/qualify" accept-charset="UTF-8" method="post" target="_blank"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="LmP5IFTgenDrWMQgKSiD/JM91zI3zvnFvD1T6RE++rfqkv6fP+wq3WKSMj9zkJAHTfJzgZGUAw/EMKZy/GaWDQ==" />
                 <input type="hidden" name="topic_id" id="topic_id" value="DCWASH_726" />
                   <div class="input-group">
                     <input type="text" class="form-control long" placeholder="example@email.com" id="email" name="email">
@@ -204,7 +165,180 @@ if (!$errName && !$errEmail && !$errMessage) {
                       </button>
                     </div>
                   </div>
-                </form>
+                </form> -->
+                <form action="https://docs.google.com/forms/d/e/1FAIpQLSd0bxVqrpfAdxZcP3eRLOqQxFTy073PdabNrJkTHcmi4JBkFg/formResponse" id="mG61Hd" method="post" name="mG61Hd" target="_self">
+              		<div class="freebirdFormviewerViewFormCard">
+              			<div class="freebirdFormviewerViewAccentBanner freebirdAccentBackground"></div>
+              			<div class="freebirdFormviewerViewFormContent">
+              				<div class="freebirdFormviewerViewHeaderHeader">
+              					<div class="freebirdFormviewerViewHeaderTitleRow">
+              						<div aria-level="1" class="freebirdFormviewerViewHeaderTitle" dir="auto" role="heading">
+              							Contact Us
+              						</div>
+              					</div>
+              					<div aria-hidden="true" class="freebirdFormviewerViewHeaderRequiredLegend" dir="auto">
+              						* Required
+              					</div>
+              				</div>
+              				<div class="freebirdFormviewerViewItemList" role="list">
+              					<div class="freebirdFormviewerViewItemsItemItem freebirdFormviewerViewItemsTextTextItem" data-item-id="1303957275" data-required="true" role="listitem">
+              						<div class="freebirdFormviewerViewItemsItemItemHeader">
+              							<div class="freebirdFormviewerViewItemsItemItemTitleContainer">
+              								<div aria-describedby="i.desc.1303957275" aria-level="2" class="freebirdFormviewerViewItemsItemItemTitle" dir="auto" role="heading">
+              									First Name <span aria-hidden="true" class="freebirdFormviewerViewItemsItemRequiredAsterisk">*</span>
+              								</div>
+              								<div class="freebirdFormviewerViewItemsItemItemHelpText" dir="auto" id="i.desc.1303957275"></div>
+              							</div>
+              						</div>
+              						<div class="freebirdFormviewerViewItemsTextItemWrapper">
+              							<div class="quantumWizTextinputPaperinputEl freebirdFormviewerViewItemsTextShortText freebirdThemedInput">
+              								<div class="quantumWizTextinputPaperinputMainContent exportContent">
+              									<div class="quantumWizTextinputPaperinputContentArea">
+              										<div class="quantumWizTextinputPaperinputInputArea">
+              											<input aria-describedby="i.desc.1303957275 i.err.1303957275" aria-label="First Name" autocomplete="off" class="quantumWizTextinputPaperinputInput exportInput" data-initial-dir="auto" data-initial-value="" dir="auto" name="entry.700498739" required="" tabindex="0" type="text" value="">
+              											<div class="quantumWizTextinputPaperinputPlaceholder exportLabel">
+              												Your answer
+              											</div>
+              										</div>
+              										<div class="quantumWizTextinputPaperinputUnderline exportUnderline"></div>
+              										<div class="quantumWizTextinputPaperinputFocusUnderline exportFocusUnderline"></div>
+              									</div>
+              								</div>
+              								<div class="quantumWizTextinputPaperinputHint exportHint"></div>
+              							</div>
+              						</div>
+              						<div class="freebirdFormviewerViewItemsItemGradingBox freebirdFormviewerViewItemsItemFeedbackBox"></div>
+              						<div class="freebirdFormviewerViewItemsItemErrorMessage" id="i.err.1303957275" role="alert"></div>
+              					</div>
+              					<div class="freebirdFormviewerViewItemsItemItem freebirdFormviewerViewItemsTextTextItem" data-item-id="730838281" data-required="true" role="listitem">
+              						<div class="freebirdFormviewerViewItemsItemItemHeader">
+              							<div class="freebirdFormviewerViewItemsItemItemTitleContainer">
+              								<div aria-describedby="i.desc.730838281" aria-level="2" class="freebirdFormviewerViewItemsItemItemTitle" dir="auto" role="heading">
+              									Last Name <span aria-hidden="true" class="freebirdFormviewerViewItemsItemRequiredAsterisk">*</span>
+              								</div>
+              								<div class="freebirdFormviewerViewItemsItemItemHelpText" dir="auto" id="i.desc.730838281"></div>
+              							</div>
+              						</div>
+              						<div class="freebirdFormviewerViewItemsTextItemWrapper">
+              							<div class="quantumWizTextinputPaperinputEl freebirdFormviewerViewItemsTextShortText freebirdThemedInput">
+              								<div class="quantumWizTextinputPaperinputMainContent exportContent">
+              									<div class="quantumWizTextinputPaperinputContentArea">
+              										<div class="quantumWizTextinputPaperinputInputArea">
+              											<input aria-describedby="i.desc.730838281 i.err.730838281" aria-label="Last Name" autocomplete="off" class="quantumWizTextinputPaperinputInput exportInput" data-initial-dir="auto" data-initial-value="" dir="auto" name="entry.69307690" required="" tabindex="0" type="text" value="">
+              											<div class="quantumWizTextinputPaperinputPlaceholder exportLabel">
+              												Your answer
+              											</div>
+              										</div>
+              										<div class="quantumWizTextinputPaperinputUnderline exportUnderline"></div>
+              										<div class="quantumWizTextinputPaperinputFocusUnderline exportFocusUnderline"></div>
+              									</div>
+              								</div>
+              								<div class="quantumWizTextinputPaperinputHint exportHint"></div>
+              							</div>
+              						</div>
+              						<div class="freebirdFormviewerViewItemsItemGradingBox freebirdFormviewerViewItemsItemFeedbackBox"></div>
+              						<div class="freebirdFormviewerViewItemsItemErrorMessage" id="i.err.730838281" role="alert"></div>
+              					</div>
+              					<div class="freebirdFormviewerViewItemsItemItem freebirdFormviewerViewItemsTextTextItem" data-item-id="32723161" data-required="true" role="listitem">
+              						<div class="freebirdFormviewerViewItemsItemItemHeader">
+              							<div class="freebirdFormviewerViewItemsItemItemTitleContainer">
+              								<div aria-describedby="i.desc.32723161" aria-level="2" class="freebirdFormviewerViewItemsItemItemTitle" dir="auto" role="heading">
+              									E-mail <span aria-hidden="true" class="freebirdFormviewerViewItemsItemRequiredAsterisk">*</span>
+              								</div>
+              								<div class="freebirdFormviewerViewItemsItemItemHelpText" dir="auto" id="i.desc.32723161"></div>
+              							</div>
+              						</div>
+              						<div class="freebirdFormviewerViewItemsTextItemWrapper">
+              							<div class="quantumWizTextinputPaperinputEl freebirdFormviewerViewItemsTextShortText freebirdThemedInput">
+              								<div class="quantumWizTextinputPaperinputMainContent exportContent">
+              									<div class="quantumWizTextinputPaperinputContentArea">
+              										<div class="quantumWizTextinputPaperinputInputArea">
+              											<input aria-describedby="i.desc.32723161 i.err.32723161" aria-label="E-mail" autocomplete="off" class="quantumWizTextinputPaperinputInput exportInput" data-initial-dir="auto" data-initial-value="" dir="auto" name="entry.1467573031" required="" tabindex="0" type="text" value="">
+              											<div class="quantumWizTextinputPaperinputPlaceholder exportLabel">
+              												Your answer
+              											</div>
+              										</div>
+              										<div class="quantumWizTextinputPaperinputUnderline exportUnderline"></div>
+              										<div class="quantumWizTextinputPaperinputFocusUnderline exportFocusUnderline"></div>
+              									</div>
+              								</div>
+              								<div class="quantumWizTextinputPaperinputHint exportHint"></div>
+              							</div>
+              						</div>
+              						<div class="freebirdFormviewerViewItemsItemGradingBox freebirdFormviewerViewItemsItemFeedbackBox"></div>
+              						<div class="freebirdFormviewerViewItemsItemErrorMessage" id="i.err.32723161" role="alert"></div>
+              					</div>
+              					<div class="freebirdFormviewerViewItemsItemItem freebirdFormviewerViewItemsTextTextItem" data-item-id="1906549635" data-required="true" role="listitem">
+              						<div class="freebirdFormviewerViewItemsItemItemHeader">
+              							<div class="freebirdFormviewerViewItemsItemItemTitleContainer">
+              								<div aria-describedby="i.desc.1906549635" aria-level="2" class="freebirdFormviewerViewItemsItemItemTitle" dir="auto" role="heading">
+              									Phone Number <span aria-hidden="true" class="freebirdFormviewerViewItemsItemRequiredAsterisk">*</span>
+              								</div>
+              								<div class="freebirdFormviewerViewItemsItemItemHelpText" dir="auto" id="i.desc.1906549635"></div>
+              							</div>
+              						</div>
+              						<div class="freebirdFormviewerViewItemsTextItemWrapper">
+              							<div class="quantumWizTextinputPaperinputEl freebirdFormviewerViewItemsTextShortText freebirdThemedInput">
+              								<div class="quantumWizTextinputPaperinputMainContent exportContent">
+              									<div class="quantumWizTextinputPaperinputContentArea">
+              										<div class="quantumWizTextinputPaperinputInputArea">
+              											<input aria-describedby="i.desc.1906549635 i.err.1906549635" aria-label="Phone Number" autocomplete="off" class="quantumWizTextinputPaperinputInput exportInput" data-initial-dir="auto" data-initial-value="" dir="auto" name="entry.600357776" required="" tabindex="0" type="text" value="">
+              											<div class="quantumWizTextinputPaperinputPlaceholder exportLabel">
+              												Your answer
+              											</div>
+              										</div>
+              										<div class="quantumWizTextinputPaperinputUnderline exportUnderline"></div>
+              										<div class="quantumWizTextinputPaperinputFocusUnderline exportFocusUnderline"></div>
+              									</div>
+              								</div>
+              								<div class="quantumWizTextinputPaperinputHint exportHint"></div>
+              							</div>
+              						</div>
+              						<div class="freebirdFormviewerViewItemsItemGradingBox freebirdFormviewerViewItemsItemFeedbackBox"></div>
+              						<div class="freebirdFormviewerViewItemsItemErrorMessage" id="i.err.1906549635" role="alert"></div>
+              					</div>
+              					<div class="freebirdFormviewerViewItemsItemItem freebirdFormviewerViewItemsTextTextItem" data-item-id="387468096" data-required="true" role="listitem">
+              						<div class="freebirdFormviewerViewItemsItemItemHeader">
+              							<div class="freebirdFormviewerViewItemsItemItemTitleContainer">
+              								<div aria-describedby="i.desc.387468096" aria-level="2" class="freebirdFormviewerViewItemsItemItemTitle" dir="auto" role="heading">
+              									Message <span aria-hidden="true" class="freebirdFormviewerViewItemsItemRequiredAsterisk">*</span>
+              								</div>
+              								<div class="freebirdFormviewerViewItemsItemItemHelpText" dir="auto" id="i.desc.387468096"></div>
+              							</div>
+              						</div>
+              						<div class="quantumWizTextinputPapertextareaEl modeLight freebirdFormviewerViewItemsTextLongText freebirdThemedInput">
+              							<div class="quantumWizTextinputPapertextareaMainContent exportContent">
+              								<div class="quantumWizTextinputPapertextareaPlaceholder exportLabel">
+              									Your answer
+              								</div>
+              								<div class="quantumWizTextinputPapertextareaContentArea exportContentArea">
+              									<textarea aria-label="Message" class="quantumWizTextinputPapertextareaInput exportTextarea" data-initial-dir="auto" data-initial-value="" dir="auto" name="entry.455260503" required="" rows="1" tabindex="0"></textarea>
+              								</div>
+              								<div class="quantumWizTextinputPapertextareaUnderline exportUnderline"></div>
+              								<div class="quantumWizTextinputPapertextareaFocusUnderline exportFocusUnderline"></div>
+              							</div>
+              							<div class="quantumWizTextinputPapertextareaHint exportHint"></div>
+              						</div>
+              						<div class="freebirdFormviewerViewItemsItemGradingBox freebirdFormviewerViewItemsItemFeedbackBox"></div>
+              						<div class="freebirdFormviewerViewItemsItemErrorMessage" id="i.err.387468096" role="alert"></div>
+              					</div>
+              				</div>
+              				<div class="freebirdFormviewerViewNavigationNavControls" data-shuffle-seed="2189474101688197414">
+              					<div class="freebirdFormviewerViewNavigationButtonsAndProgress">
+              						<div class="freebirdFormviewerViewNavigationButtons">
+              							<div aria-disabled="false" class="quantumWizButtonPaperbuttonEl quantumWizButtonPaperbuttonFlat quantumWizButtonPaperbuttonDark quantumWizButtonPaperbutton2El2 freebirdFormviewerViewNavigationSubmitButton" role="button" tabindex="0">
+              								<div class="quantumWizButtonPaperbuttonRipple exportInk"></div>
+              								<div class="quantumWizButtonPaperbuttonFocusOverlay exportOverlay"></div><span class="quantumWizButtonPaperbuttonLabel exportLabel">Submit</span>
+              							</div>
+              						</div>
+              					</div>
+              					<div class="freebirdFormviewerViewNavigationPasswordWarning">
+              						Never submit passwords through Google Forms.
+              					</div>
+              				</div><input name="fvv" type="hidden" value="1"><input name="draftResponse" type="hidden" value="[,,&quot;2189474101688197414&quot;] "><input name="pageHistory" type="hidden" value="0"><input name="fbzx" type="hidden" value="2189474101688197414">
+              			</div>
+              		</div>
+              	</form>
               </div>
             </div>
           </div>

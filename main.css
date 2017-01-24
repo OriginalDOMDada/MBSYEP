@@ -591,6 +591,9 @@ table.table {
     table.table td a {
       color: #0e5682; }
 
+.google-form {
+  margin-top: 25px; }
+
 body {
   font-family: "Open Sans", Arial;
   background: #EEE;
@@ -749,5 +752,3 @@ body * {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column; } }
-
-/*# sourceMappingURL=main.css.map */
