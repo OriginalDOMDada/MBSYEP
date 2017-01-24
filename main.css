@@ -498,17 +498,18 @@ body.subpage .top-section p {
 body.subpage .top-section .col-md-6.col-md-offset-3 {
   position: relative;
   height: 100%; }
-  body.subpage .top-section .col-md-6.col-md-offset-3 button {
+  body.subpage .top-section .col-md-6.col-md-offset-3 a.button {
     margin-top: 225px;
     font-size: 18px;
-    background-color: #fcd804;
+    background-color: #00ab65;
     padding: 10px 20px;
-    border: none; }
-    body.subpage .top-section .col-md-6.col-md-offset-3 button a {
-      color: white;
-      font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-      font-weight: bold;
-      text-decoration: none; }
+    border: none;
+    color: white;
+    font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: bold;
+    text-decoration: none; }
+    body.subpage .top-section .col-md-6.col-md-offset-3 a.button.hvr-rectangle-in:before {
+      background-color: #fcd804; }
 body.subpage .documents a {
   display: block;
   font-size: 18px;
