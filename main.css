@@ -308,7 +308,7 @@ body .announcements-section {
     padding: 15px; }
   body .announcements-section .date {
     height: 150px;
-    background-image: url("background.jpg");
+    background-image: url("img/background.jpg");
     background-attachment: fixed;
     padding: 5px;
     border: 2px solid white;
@@ -472,7 +472,7 @@ body .key-message-section {
   background-position: center 150px !important; }
 
 .employers .alternate {
-  background: url("img/employers_image.jpg") no-repeat;
+  background: url("img/employers_header.jpg") no-repeat;
   background-size: 100% !important; }
 
 .faq .alternate {
@@ -511,11 +511,14 @@ body.subpage .top-section .col-md-6.col-md-offset-3 {
     body.subpage .top-section .col-md-6.col-md-offset-3 a.button.hvr-rectangle-in:before {
       background-color: #fcd804; }
 body.subpage .documents a {
+  text-decoration: underline; }
+body.subpage .documents a, body.subpage .documents p {
   display: block;
   font-size: 18px;
   color: #0e5682;
   padding: 10px;
-  font-family: "Nunito", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
+  font-family: "Nunito", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  cursor: pointer; }
 
 .faqs {
   margin-top: 50px; }

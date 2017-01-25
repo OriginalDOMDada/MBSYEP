@@ -29,13 +29,18 @@ body.subpage {
       }
     }
   }
-  .documents a{
-    display: block;
-    font-size: 18px;
-    color: $blue;
-    padding: 10px;
-    font-family: $nunito;
-
+  .documents {
+    a {
+      text-decoration: underline;
+    }
+    a,p{
+      display: block;
+      font-size: 18px;
+      color: $blue;
+      padding: 10px;
+      font-family: $nunito;
+      cursor: pointer;
+    }
   }
 }
 

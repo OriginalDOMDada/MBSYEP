@@ -7,55 +7,13 @@ function closeNav() {
     document.getElementById("myNav").style.height = "0%";
 }
 
-  // $(function() {
-  //   $(".slice").mouseenter(function () {
-  //            $this = $(this);
-  //           // $this.find("span").css("display", "block");
-  //           console.log($this);
-  //     }).mouseleave(function ()
-  //     {
-  //         $this = $(this);
-  //         // $this.find("span").hide();
-  //
-  //     });
-  // });
-//   function random(icon_number) {
-//     return Math.floor(Math.random() * icon_number);
-//   }
-//   var icon_number = $('.top-section svg g').length;
-//   var icons = $('.top-section svg g');
-//   // var transition_time = 500;
-//   // var waiting_time = 500;
-//   $(icons).each( function(index,value) {
-//       $(value).attr('id','icon_' + index);
-//       // $(value).css('visibility','visible');
-//   });
-//
-// (function fadeOutSvg() {
-//   var number = $('#icon_' + random(icon_number));
-//   if($(number).css('display') !== 'none'){
-//     $(number).fadeOut(Math.floor(Math.random() * 5000),fadeOutSvg);
-//     $(number).delay(1000).fadeIn(Math.floor(Math.random() * 250),fadeOutSvg);
-//   }
-//   else {
-//     $(number).fadeIn(Math.floor(Math.random() * 250),fadeOutSvg);
-//   }
-//
-// })();
 var x = 0;
 var current = 0;
 var up = 0;
 var direction = 'h';
-// console.log(x+1);
-// $(window).scroll(function(){
-//   current -= 1;
-//   $('div.horizontal-section').css("backgroundPosition", (direction == 'h') ? current+"px 0" : "0 " + current+"px");
-// });
 
   $(window).on('wheel', function(e) {
   	var delta = e.originalEvent.deltaY;
-    // console.log(delta);
-    // current -= 1;
     up = current;
     if (delta > 0){
       current -= 2;
@@ -95,20 +53,6 @@ var direction = 'h';
   }
 
   function addSlice(id, sliceSize, pieElement, offset, sliceID, color) {
-    // console.log(size);
-    // console.log(pieElement);
-    // console.log(sliceSize);
-    // console.log(piebackground);
-    // $(id+ " .pie-chart__legend li").each(function() {
-    //   // console.log($(this).attr('style'));
-    //   var raw = String($(this).attr('style')).replace('border-color: ','').replace(';','');
-    //   var piebackground = $("."+sliceID + " span").css('background-color');
-    //   if(raw === piebackground){
-    //     console.log(raw);
-    //     console.log(piebackground);
-    //   }
-    //
-    // });
 
     $(pieElement).append("<div data-total='" + '1' + "' class='slice "+ sliceID + "'><span></span></div>");
     var offset = offset - 1;
@@ -146,8 +90,6 @@ var direction = 'h';
       i             = 0,
       pieElement    = id + " .pie-chart__pie",
       dataElement   = id + " .pie-chart__legend"
-
-      // console.log($(dataElement));
 
 
       if(id === '.pieID--micro-skills'){
