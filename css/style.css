@@ -144,7 +144,7 @@ nav#header {
       display: inline-block;
       vertical-align: middle; }
       nav#header .nav-message a.hvr-rectangle-in:before {
-        background-color: #0e5682; }
+        background-color: #fcd804; }
 
 footer {
   position: relative;
@@ -266,42 +266,24 @@ body .top-section {
   width: 100vw;
   display: table;
   position: relative; }
-  body .top-section .home-headline {
-    bottom: -250px;
-    position: relative;
-    display: block;
-    width: 80%;
-    height: auto;
-    margin: 0 auto; }
-  body .top-section img {
-    width: 30%;
-    height: auto;
-    float: left;
-    border-right: 5px solid white;
-    padding: 0 30px; }
   body .top-section h1 {
     font-family: "Nunito", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 900;
-    text-align: left;
-    display: inline-block;
-    z-index: 100;
-    width: 100%;
-    padding-left: 30px;
-    float: left;
-    width: 70%;
-    margin-top: 0;
+    text-align: center;
+    display: table-cell;
     color: white;
-    line-height: 1em; }
+    line-height: 1em;
+    z-index: 100;
+    bottom: -250px;
+    position: relative; }
     body .top-section h1 span {
       display: block; }
       body .top-section h1 span.yellow-title {
         font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-        font-size: 40px;
+        font-size: 50px;
         color: #fcd804;
         font-style: italic;
         line-height: 1.5em; }
-      body .top-section h1 span.white-title {
-        font-size: 50px; }
     body .top-section h1 img {
       width: 200px;
       height: auto; }
@@ -347,12 +329,12 @@ body .announcements-section {
       body .announcements-section .date .button-wrapper button {
         width: 25%;
         display: inline-block;
-        background-color: white;
+        background-color: #fcd804;
         margin: 0 5px;
         border-radius: 0;
-        border-color: #0e5682; }
+        border-color: white; }
         body .announcements-section .date .button-wrapper button .glyphicon {
-          color: #00ab65; }
+          color: #ebebeb; }
 body .horizontal-section {
   background-color: #fcd804;
   height: 200px;
@@ -775,4 +757,4 @@ body * {
     -ms-flex-direction: column;
     flex-direction: column; } }
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=style.css.map */

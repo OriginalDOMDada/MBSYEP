@@ -7,7 +7,7 @@ nav#header {
       position: relative;
   }
   .navbar-brand {
-    height: 150px;
+    height: 100px;
     img {
       height: 100%;
     }
@@ -72,7 +72,7 @@ nav#header {
       display: inline-block;
       vertical-align: middle;
       &.hvr-rectangle-in:before {
-        background-color: $yellow;
+        background-color: $blue;
       }
     }
   }
