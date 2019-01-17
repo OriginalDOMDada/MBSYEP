@@ -184,7 +184,7 @@ footer {
     padding-top: 0; } }
 @media screen and (max-width: 768px) {
   body.front .top-section.alternate {
-    margin-top: 225px;
+    margin-top: 175px;
     height: 300px;
     background-position: center !important;
     background-size: cover !important; }
