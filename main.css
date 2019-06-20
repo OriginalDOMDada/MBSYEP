@@ -204,6 +204,9 @@ footer #footer img {
   vertical-align: middle;
   border: 0;
 }
+footer #footer img.img-does {
+  padding: 0 70px;
+}
 
 @media screen and (max-width: 480px) {
   .row table.table th {
@@ -217,6 +220,9 @@ footer #footer img {
   #footer .footer-images img {
     width: 50%;
     margin: 15px 0;
+  }
+  #footer .footer-images img.img-does {
+    padding: 0 70px;
   }
 
   .pie-charts .col-sm-4 {
