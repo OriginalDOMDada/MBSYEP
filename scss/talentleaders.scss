@@ -4,6 +4,7 @@ html, body {
 }
 
 .talentleaders {
+  // display: none;
   #header {
     background-color: #012c3b;
     .navbar-brand {
@@ -123,5 +124,52 @@ html, body {
   }
   footer #footer {
     border-color: #BF0000;
+  }
+  .slick-container {
+    display: block;
+    height: auto;
+    width: 100%;
+    max-width: 1000px;
+    margin:  auto;
+  }
+  .slick-div {
+    padding: 0 50px;
+  }
+  .slick-slide {
+    // max-width: 600px;
+    width: 100%;
+  }
+  .slider-nav {
+    padding-bottom: 50px;
+  }
+  .slick-slide img {
+     width: 100%;
+  }
+  .sponsor-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items:center;
+    padding: 25px;
+    img {
+      width: 200px;
+      height: 100%;
+      padding: 25px 5px;
+    }
+  }
+  .slick-dots {
+    bottom: 30px;
+  }
+  .slick-prev:before,
+  .slick-next:before {
+    color: #012c3b;
+  }
+  .down-arrow {
+    position: absolute;
+    z-index: 20;
+    bottom: 50px;
+    width: 50px;
+    height: auto;
+    left: calc(50% - 25px);
   }
 }

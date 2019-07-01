@@ -172,45 +172,6 @@ var direction = 'h';
 
   createPieCharts();
 
-  // createPieCharts();
-// end of data
-// var slices = [];
-// var stats = [];
-// $('.pie-charts .pie-chart--wrapper .pie-chart').each(function(){
-//   $('.pie-chart__pie .slice').each(function() {
-//     var $this = $(this).children('span');
-//      slices.push($($this).css('background-color'));
-//   });
-//   $('.pie-chart__legend li').each(function() {
-//     $(this).addClass('numbers');
-//      stats.push($(this).css('border-color'));
-//   });
-// });
-
-// $(function() {
-//   $(".slice").mouseenter(function () {
-//           var currentChart = $(this).parent();
-//            var currentColor = $(this).children('span').css('background-color');
-//
-//           var matchMaker = $('li.numbers').filter(function() {
-//               var element = $(this);
-//               if(element.css('border-color') == currentColor) {
-//                 var currentNumber = $(element).children('span')['0'].innerHTML;
-//                 var currentJob = $(element).children('em')['0'].innerHTML;
-//                 $("<div class='current-number'>" + currentNumber + "<br><span>" +currentJob + "</span></div>").appendTo(currentChart);
-//               }
-//               return true;
-//           });
-//
-//     }).mouseleave(function ()
-//     {
-//         $this = $(this);
-//         // $this.find("span").hide();
-//         $('.current-number').remove();
-//
-//     });
-// });
-
 $('.pie-chart__legend li a').on('click',function(){
     var $this = $(this);
     var chartContainer = $this.closest('.pie-chart--wrapper');
@@ -287,5 +248,21 @@ $('.pie-chart__legend li a').on('click',function(){
         });
     });
 
+    $('.slick-div').slick({
+      arrows: true,
+      fade: true,
+      centerMode: true,
+      asNavFor: '.slider-nav',
+      adaptiveHeight: true
+    });
+    $('.slider-nav').slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      asNavFor: '.slick-div',
+      dots: true,
+      centerMode: true,
+      arrows: false,
+      focusOnSelect: true
+    });
 
 });

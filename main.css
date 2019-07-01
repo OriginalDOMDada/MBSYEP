@@ -1063,5 +1063,51 @@ html, body {
 .talentleaders footer #footer {
   border-color: #BF0000;
 }
+.talentleaders .slick-container {
+  display: block;
+  height: auto;
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+}
+.talentleaders .slick-div {
+  padding: 0 50px;
+}
+.talentleaders .slick-slide {
+  width: 100%;
+}
+.talentleaders .slider-nav {
+  padding-bottom: 50px;
+}
+.talentleaders .slick-slide img {
+  width: 100%;
+}
+.talentleaders .sponsor-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 25px;
+}
+.talentleaders .sponsor-logos img {
+  width: 200px;
+  height: 100%;
+  padding: 25px 5px;
+}
+.talentleaders .slick-dots {
+  bottom: 30px;
+}
+.talentleaders .slick-prev:before,
+.talentleaders .slick-next:before {
+  color: #012c3b;
+}
+.talentleaders .down-arrow {
+  position: absolute;
+  z-index: 20;
+  bottom: 50px;
+  width: 50px;
+  height: auto;
+  left: calc(50% - 25px);
+}
 
 /*# sourceMappingURL=main.css.map */
