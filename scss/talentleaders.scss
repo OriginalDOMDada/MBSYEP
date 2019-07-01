@@ -155,6 +155,9 @@ html, body {
       width: 200px;
       height: 100%;
       padding: 25px 5px;
+      &:first-child {
+        padding: 25px 50px;
+      }
     }
   }
   .slick-dots {

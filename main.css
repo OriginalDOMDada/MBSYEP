@@ -1094,6 +1094,9 @@ html, body {
   height: 100%;
   padding: 25px 5px;
 }
+.talentleaders .sponsor-logos img:first-child {
+  padding: 25px 50px;
+}
 .talentleaders .slick-dots {
   bottom: 30px;
 }
