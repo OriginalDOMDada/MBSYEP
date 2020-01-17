@@ -148,7 +148,7 @@ nav#header .navbar-collapse ul.nav a.active:before {
 }
 nav#header .nav-message {
   position: relative;
-  padding: 0 0 25px;
+  padding: 0;
   background-color: #ebebeb;
   width: 100%;
   -webkit-box-shadow: 2px 7px 11px -2px rgba(204, 204, 204, 0.5);
@@ -386,7 +386,7 @@ body .top-section .svg-background svg {
 body .announcements-section {
   padding: 25px;
   width: 100%;
-  background: #ebebeb;
+  background: white;
   padding: 25px;
 }
 body .announcements-section .list {
@@ -397,19 +397,19 @@ body .announcements-section .col-date {
 }
 body .announcements-section .date {
   height: 150px;
-  background-image: url("img/background.jpg");
+  background-color: #ebebeb;
   background-attachment: fixed;
   padding: 5px;
-  border: 2px solid white;
+  border: 1px solid #0e5682;
   position: relative;
 }
 body .announcements-section .date h4 {
-  color: white;
+  color: #0e5682;
   font-size: 20px;
   font-family: "Nunito", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 body .announcements-section .date p {
-  color: white;
+  color: black;
   font-size: 16px;
 }
 body .announcements-section .date .button-wrapper {
@@ -422,13 +422,13 @@ body .announcements-section .date .button-wrapper {
 body .announcements-section .date .button-wrapper button {
   width: 25%;
   display: inline-block;
-  background-color: white;
+  background-color: #00ab65;
   margin: 0 5px;
   border-radius: 0;
-  border-color: #0e5682;
+  border-color: white;
 }
 body .announcements-section .date .button-wrapper button .glyphicon {
-  color: #00ab65;
+  color: white;
 }
 body .horizontal-section {
   background-color: #fcd804;
@@ -464,7 +464,7 @@ body .key-message-section .youtube {
   width: 100%;
   margin: 20px auto;
   display: inline-block;
-  background: url("img/video.jpg");
+  background: url("img/about_video.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -479,7 +479,7 @@ body .key-message-section .youtube svg#play {
   opacity: 1;
 }
 body .key-message-section .youtube:hover {
-  background: url("img/video-hover.jpg");
+  background: url("img/about_video_hover.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -499,10 +499,10 @@ body .key-message-section .youtube:hover svg#play g {
   padding: 25px;
 }
 .stories-section .col-md-6 .story-2 {
-  background: url("img/host_story.jpg");
+  background: url("img/areyouready.jpg");
 }
 .stories-section .col-md-6 .story-1 {
-  background: url("img/youth_story.jpg");
+  background: url("img/pressrelease.jpg");
 }
 .stories-section .col-md-6 .story-2, .stories-section .col-md-6 .story-1 {
   background-position: center;
@@ -607,7 +607,7 @@ body .key-message-section .youtube:hover svg#play g {
 }
 
 .contact-us .alternate {
-  background: url("img/contact-2019.jpg") no-repeat;
+  background: url("img/contact-us.jpg") no-repeat;
   background-size: 100% !important;
 }
 

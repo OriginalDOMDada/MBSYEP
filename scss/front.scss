@@ -66,7 +66,7 @@ body {
     padding: 25px;
     // height: 400px;
     width: 100%;
-    background: $grey;
+    background: white;
     padding: 25px;
     .list {
       padding: 25px 0;
@@ -76,19 +76,20 @@ body {
     }
     .date {
       height: 150px;
-      background-image: url('img/background.jpg');
+      // background-image: url('img/background.jpg');
+      background-color: $grey;
       // background-position: center;
       background-attachment: fixed;
       padding: 5px;
-      border: 2px solid white;
+      border: 1px solid $blue;
       position: relative;
       h4 {
-        color: white;
+        color: $blue;
         font-size: 20px;
         font-family: $nunito;
       }
       p {
-        color: white;
+        color: black;
         font-size: 16px;
       }
       .button-wrapper {
@@ -100,12 +101,13 @@ body {
           button {
             width: 25%;
             display: inline-block;
-            background-color: white;
+            background-color: $green;
+            // opacity: .8;
             margin: 0 5px;
             border-radius: 0;
-            border-color: $blue;
+            border-color: white;
             .glyphicon {
-              color: $green;
+              color: white;
             }
           }
       }
@@ -149,7 +151,7 @@ body {
       width: 100%;
       margin: 20px auto;
       display: inline-block;
-      background: url('img/video.jpg');
+      background: url('img/about_video.jpg');
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
@@ -163,7 +165,7 @@ body {
         opacity: 1;
       }
       &:hover {
-        background: url('img/video-hover.jpg');
+        background: url('img/about_video_hover.jpg');
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -188,10 +190,10 @@ body {
   }
   .col-md-6 {
     .story-2 {
-      background: url('img/host_story.jpg');
+      background: url('img/areyouready.jpg');
     }
     .story-1 {
-      background: url('img/youth_story.jpg');
+      background: url('img/pressrelease.jpg');
     }
     .story-2, .story-1 {
       // background:linear-gradient(rgba(0, 85, 129, 0.5),rgba(0, 85, 129, 0.5)),url('img/sample_1.jpg');
@@ -308,7 +310,7 @@ body {
 
 
 .contact-us .alternate {
-  background: url('img/contact-2019.jpg') no-repeat;
+  background: url('img/contact-us.jpg') no-repeat;
   background-size: 100% !important;
 }
 
