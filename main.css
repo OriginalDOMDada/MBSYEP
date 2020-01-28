@@ -690,6 +690,14 @@ body.subpage .documents a, body.subpage .documents p {
   list-style-type: none;
 }
 
+.email-img {
+  margin: 10px;
+}
+.email-img img {
+  height: 75px;
+  width: auto;
+}
+
 .info {
   padding-bottom: 25px;
 }
