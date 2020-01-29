@@ -205,7 +205,7 @@ footer #footer img {
   border: 0;
 }
 footer #footer img.img-does {
-  padding: 0 70px;
+  padding: 0 40px;
 }
 
 @media screen and (max-width: 480px) {
